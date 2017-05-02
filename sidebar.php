@@ -1,7 +1,7 @@
 <?php
 /**
  * Sidebar template file
- * @package lemonade
+ * @package back2basics
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {

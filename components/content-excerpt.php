@@ -1,7 +1,7 @@
 <?php
 /**
  * Display posts
- * @package lemonade
+ * @package back2basics
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -26,7 +26,7 @@
 		<?php the_excerpt();
 			// for links within the page
 			wp_link_pages( array(
-				'before' => '<div>' . esc_html__( 'Pages:', 'lemonade' ),
+				'before' => '<div>' . esc_html__( 'Pages:', 'back2basics' ),
 				'after'  => '</div>',
 			) );
 		?>

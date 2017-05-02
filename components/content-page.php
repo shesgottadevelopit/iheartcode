@@ -1,7 +1,7 @@
 <?php
 /**
  * Display pages
- * @package lemonade
+ * @package back2basics
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -13,7 +13,7 @@
 		<?php the_content();
 			// for links within the page
 			wp_link_pages( array(
-				'before' => '<div>' . esc_html__( 'Pages:', 'lemonade' ),
+				'before' => '<div>' . esc_html__( 'Pages:', 'back2basics' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -24,7 +24,7 @@
 				edit_post_link(
 					sprintf(
 						/* translators: %s: Name of current post */
-						esc_html__( 'Edit %s', 'lemonade' ),
+						esc_html__( 'Edit %s', 'back2basics' ),
 						the_title( '<span class="screen-reader-text">"', '"</span>', false )),
 					'<span class="edit-link">',
 					'</span>'

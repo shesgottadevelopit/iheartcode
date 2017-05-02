@@ -1,7 +1,7 @@
 <?php
 /**
  * Archive template file
- * @package lemonade
+ * @package back2basics
  */
 
 get_header(); ?>

@@ -2,7 +2,7 @@
 /**
  * Singular template file (for pages & posts) - very generic
  * Fallback for single.php and page.php
- * @package lemonade
+ * @package back2basics
  */
 
 get_header(); ?>

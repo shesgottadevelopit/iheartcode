@@ -1,7 +1,7 @@
 <?php
 /**
  * Header template file
- * @package lemonade
+ * @package back2basics
  */
  ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -34,7 +34,7 @@
 			   -->
 			</div>
 			<nav role="navigation">
-			   <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'lemonade' ); ?></button>
+			   <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'back2basics' ); ?></button>
 			   <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'nav-menu' ) ); ?>
 		   </nav><!-- end navigation -->
 		</header>

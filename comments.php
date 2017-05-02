@@ -1,7 +1,7 @@
 <?php
 /**
  * Comments template file
- * @package lemonade
+ * @package back2basics
  */
 if ( post_password_required() ) {
 	return; // This post is password protected. Enter the password to view comments
@@ -15,7 +15,7 @@ if ( post_password_required() ) {
 	<h2>
 		<?php
 			printf(
-				esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'lemonade' ) ),
+				esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'back2basics' ) ),
 				number_format_i18n( get_comments_number() ),
 				'<span>' . get_the_title() . '</span>'
 			);
@@ -34,8 +34,8 @@ if ( post_password_required() ) {
 	<!-- comment navigation -->
 	<nav role="navigation">
 		<div>
-			<div><?php previous_comments_link( esc_html__( 'Older Comments', 'lemonade' ) ); ?></div>
-			<div><?php next_comments_link( esc_html__( 'Newer Comments', 'lemonade' ) ); ?></div>
+			<div><?php previous_comments_link( esc_html__( 'Older Comments', 'back2basics' ) ); ?></div>
+			<div><?php next_comments_link( esc_html__( 'Newer Comments', 'back2basics' ) ); ?></div>
 
 		</div>
 	</nav>
@@ -46,7 +46,7 @@ if ( post_password_required() ) {
 	// If comments are closed and there are comments, let's leave a little note, shall we?
 	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
 
-	<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'lemonade' ); ?></p>
+	<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'back2basics' ); ?></p>
 	<?php endif; ?>
 	<?php comment_form(); ?>
 </div>

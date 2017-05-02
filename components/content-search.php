@@ -1,7 +1,7 @@
 <?php
 /**
  * Display search posts
- * @package lemonade
+ * @package back2basics
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
