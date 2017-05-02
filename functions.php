@@ -124,8 +124,12 @@ function back2basics_fonts() {
 }
 add_action( 'wp_enqueue_scripts', 'back2basics_fonts' );
 
-/** uncomment below for custom features
-*/
+/** uncomment below for custom features */
+
+/**
+ * Implement the Admin Features
+ */
+require get_template_directory() . '/admin/custom-admin.php';
 
 /**
  * Implement the Custom Header feature.
