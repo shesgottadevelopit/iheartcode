@@ -395,15 +395,19 @@ table {
 /*--------------------------------------------------------------
 # typography/icons
 --------------------------------------------------------------*/
+html {
+  font-size: 16px;
+}
+
 body,
 button,
 input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
-  font-size: 16px;
+  font-family: "Karla", Tahoma, sans-serif;
   font-size: 1rem;
+  font-weight: 400;
   line-height: 1.5;
 }
 
@@ -414,6 +418,9 @@ h4,
 h5,
 h6 {
   clear: both;
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
 }
 
 p {
@@ -437,9 +444,8 @@ address {
 
 pre {
   background: #eee;
-  font-family: "Courier 10 Pitch", Courier, monospace;
-  font-size: 15px;
-  font-size: 0.9375rem;
+  font-family: "Cousine", "Courier 10 Pitch", Courier, monospace;
+  font-size: 0.85rem;
   line-height: 1.6;
   margin-bottom: 1.6em;
   max-width: 100%;
@@ -451,9 +457,8 @@ code,
 kbd,
 tt,
 var {
-  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  font-size: 15px;
-  font-size: 0.9375rem;
+  font-family: "Cousine", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 0.85rem;
 }
 
 abbr,
