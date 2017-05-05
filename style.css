@@ -405,7 +405,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: "Karla", Tahoma, sans-serif;
+  font-family: "Inconsolata", "Karla", Tahoma, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -419,8 +419,8 @@ h5,
 h6 {
   clear: both;
   margin: 0;
-  font-family: "Rubik", sans-serif;
-  font-weight: 500;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
 }
 
 p {
