@@ -119,7 +119,7 @@ add_action( 'wp_enqueue_scripts', 'back2basics_scripts' );
  * Enqueue Additional Fonts
  */
 function back2basics_fonts() {
-	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Inconsolata:400,700|Cousine:400,400i,700,700i|Karla:400,400i,700,700i|Rubik:500,500i', array(), '20170502');
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700|Inconsolata:400,700|Cousine:400,400i,700,700i|Karla:400,400i,700,700i', array(), '20170502');
 	wp_enqueue_style( 'ionicons', 'http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css', array(), '20170324');
 }
 add_action( 'wp_enqueue_scripts', 'back2basics_fonts' );
