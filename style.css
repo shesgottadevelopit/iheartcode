@@ -581,6 +581,12 @@ big {
   outline: 0;
 }
 
+.article-tag, .article-tags a {
+  font-size: .75rem;
+  padding-right: .4rem;
+  color: #848c8e;
+}
+
 .article-date {
   color: #a61c3c;
   font-weight: 700;
