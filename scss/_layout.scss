@@ -1,0 +1,30 @@
+// site-page
+
+html, body {
+	overflow-x: hidden;
+}
+
+.site-page {
+	max-width: 660px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 1rem 0;
+
+}
+
+.full-width-bar {
+	//position: relative;
+	left: 50%;
+	margin-left: -50vw;
+	width: 100vw;
+	min-width: 100%;
+	padding: 0 calc(50vw - 50%);
+	box-sizing: border-box;
+	position: relative;
+    background-color: transparent;
+
+}
+
+.site-content {
+	margin-top: 3rem;
+}

@@ -10,7 +10,7 @@ html {
 }
 
 body {
-	background: $taupe; /* Fallback for when there is no custom background color defined. */
+	background: $cream; //$taupe; /* Fallback for when there is no custom background color defined. */
 }
 
 blockquote:before,
@@ -34,7 +34,7 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em 0;
 }
 
 ul {

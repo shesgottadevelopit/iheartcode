@@ -4,9 +4,9 @@
  * @package back2basics
  */
 ?>
-<footer role="contentinfo">
-		<div>
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'back2basics' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'back2basics' ), '[insert your sponsor]' ); ?></a> Copyright YEAR-<?php echo date('Y'); ?>.<?php bloginfo('name'); ?>
+<footer class="site-footer full-width-bar" role="contentinfo">
+		<div class="footer-content">
+			Copyright <?php echo date('Y'); ?> <span>❤</span> <?php bloginfo('name'); ?>
 		</div>
 	</footer>
 </div><!-- end page -->

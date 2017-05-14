@@ -233,6 +233,35 @@ th {
 }
 
 /*--------------------------------------------------------------
+# layout
+--------------------------------------------------------------*/
+html, body {
+  overflow-x: hidden;
+}
+
+.site-page {
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem 0;
+}
+
+.full-width-bar {
+  left: 50%;
+  margin-left: -50vw;
+  width: 100vw;
+  min-width: 100%;
+  padding: 0 calc(50vw - 50%);
+  box-sizing: border-box;
+  position: relative;
+  background-color: transparent;
+}
+
+.site-content {
+  margin-top: 3rem;
+}
+
+/*--------------------------------------------------------------
 # general element formatting
 --------------------------------------------------------------*/
 html {
@@ -247,8 +276,7 @@ html {
 }
 
 body {
-  background: #e8d2ae;
-  /* Fallback for when there is no custom background color defined. */
+  background: #fdeee9;
 }
 
 blockquote:before,
@@ -272,7 +300,7 @@ hr {
 
 ul,
 ol {
-  margin: 0 0 1.5em 3em;
+  margin: 0 0 1.5em 0;
 }
 
 ul {
@@ -408,7 +436,7 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
+  color: #2e382e;
   font-family: "Inconsolata", "Karla", Tahoma, sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -424,7 +452,6 @@ h6 {
   clear: both;
   margin: 0;
   font-family: "Hind", Tahoma, sans-serif;
-  font-weight: 700;
 }
 
 p {
@@ -484,13 +511,37 @@ big {
 /*--------------------------------------------------------------
 # sections (content/posts/widgets)
 --------------------------------------------------------------*/
-.widget {
-  margin: 0 0 1.5em;
+.masthead {
+  background-color: #ffffff;
+  padding-bottom: 2rem;
 }
 
-/* Make sure select elements fit in widgets. */
-.widget select {
-  max-width: 100%;
+.site-banner {
+  border-bottom: 1px solid #2e382e;
+}
+
+.site-title {
+  font-size: 2.25rem;
+  color: #2e382e;
+  margin-bottom: 0;
+}
+.site-title a {
+  text-decoration: none;
+  color: #2e382e;
+  font-weight: 700;
+}
+.site-title a:visited {
+  color: #2e382e;
+}
+.site-title a:hover, .site-title a:focus, .site-title a:active {
+  color: #b97375;
+}
+.site-title a:hover, .site-title a:focus, .site-title a:active {
+  outline: 0;
+}
+
+.site-description {
+  font-size: 1.18rem;
 }
 
 .sticky {
@@ -501,25 +552,80 @@ big {
   margin: 0 0 1.5em;
 }
 
-.byline,
-.updated:not(.published) {
-  display: none;
-}
-
 .single .byline,
 .group-blog .byline {
   display: inline;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em 0 0;
-}
-
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
+}
+
+.article-title {
+  font-weight: 700;
+  color: #5c5346;
+}
+.article-title a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #5c5346;
+}
+.article-title a:visited {
+  color: #5c5346;
+}
+.article-title a:hover, .article-title a:focus, .article-title a:active {
+  color: #b97375;
+}
+.article-title a:hover, .article-title a:focus, .article-title a:active {
+  outline: 0;
+}
+
+.article-date {
+  color: #a61c3c;
+  font-weight: 700;
+}
+
+.article-content {
+  margin: 1.5em 0 0;
+}
+
+.site-footer {
+  background-color: #5c5346;
+  font-size: .9rem;
+  color: #ffffff;
+}
+.site-footer a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.site-footer a:visited {
+  color: #ffffff;
+}
+.site-footer a:hover, .site-footer a:focus, .site-footer a:active {
+  color: #b97375;
+}
+.site-footer a:hover, .site-footer a:focus, .site-footer a:active {
+  outline: 0;
+}
+
+.footer-content {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.widget {
+  margin: 0 0 1.5em;
+}
+
+.widget-title {
+  text-transform: uppercase;
+  letter-spacing: .15rem;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+  max-width: 100%;
 }
 
 .comment-content a {
@@ -619,19 +725,25 @@ textarea {
 # navigation (links/menus)
 --------------------------------------------------------------*/
 a {
-  color: royalblue;
+  color: #a61c3c;
+  text-decoration: underline;
+  font-weight: 700;
 }
 a:visited {
-  color: purple;
+  color: #a61c3c;
 }
 a:hover, a:focus, a:active {
-  color: midnightblue;
+  color: #b97375;
 }
 a:focus {
   outline: thin dotted;
 }
 a:hover, a:active {
   outline: 0;
+}
+
+.top-nav {
+  display: none;
 }
 
 .main-navigation {

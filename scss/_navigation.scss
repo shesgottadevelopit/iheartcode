@@ -1,15 +1,17 @@
 // links
 a {
-	color: royalblue;
+	color: $candy;
+	text-decoration: underline;
+	font-weight: 700;
 	
 	&:visited {
-	color: purple;
+	color: $candy;
 	}
 	
 	&:hover,
 	&:focus,
 	&:active {
-		color: midnightblue;
+		color: $mauve;
 	}
 
 	&:focus {
@@ -23,6 +25,10 @@ a {
 }
 
 //menus 
+
+.top-nav {
+	display: none; // temp for development
+}
 .main-navigation {
 	clear: both;
 	display: block;

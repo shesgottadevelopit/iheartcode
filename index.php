@@ -5,11 +5,11 @@
  */
 
 get_header(); ?>
-<main role="main">
+<main class="site-content" role="main">
 	<?php
 		// init loop
 		if ( have_posts() ) : while ( have_posts() ) : the_post();
-			get_template_part( 'content');
+			get_template_part( 'content-excerpt');
 			endwhile;
 			// insert navigation or pagination
 			the_posts_navigation();

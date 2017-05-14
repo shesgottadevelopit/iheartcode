@@ -1,14 +1,57 @@
-// widgets
-.widget {
-	margin: 0 0 1.5em;
+// site-page
+
+.site-page {
+
 }
 
-/* Make sure select elements fit in widgets. */
-.widget select {
-	max-width: 100%;
+// header
+.masthead {
+	background-color: $white;
+	padding-bottom: 2rem;
+
 }
 
-// pages and posts
+.site-banner {
+	border-bottom: 1px solid $offblack;
+	//margin: 0 auto;
+
+}
+
+.site-title {
+	font-size: 2.25rem;
+	color: $offblack;
+	margin-bottom: 0;
+
+	a {
+		text-decoration: none;
+		color: $offblack;
+		font-weight: 700;
+
+		&:visited {
+			color: $offblack;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: $mauve;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			outline: 0;
+		}
+	}
+}
+
+.site-description {
+	font-size: 1.18rem;
+
+}
+
+// posts & pages
+
 .sticky {
 	display: block;
 }
@@ -19,7 +62,7 @@
 
 .byline,
 .updated:not(.published) {
-	display: none;
+	//display: none;
 }
 
 .single .byline,
@@ -27,15 +70,98 @@
 	display: inline;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
-}
-
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+
+.article-title {
+	font-weight: 700;
+	color: $lightbrown;
+	
+	a {
+		font-weight: 600;
+		text-decoration: none;
+		color: $lightbrown;
+
+		&:visited {
+			color: $lightbrown;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: $mauve;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			outline: 0;
+		}
+	}
+	
+}
+
+.article-date {
+	color: $candy;
+	font-weight: 700;
+}
+
+.article-content {
+	margin: 1.5em 0 0;
+}
+
+// footer
+.site-footer {
+	background-color: $lightbrown;
+	font-size: .9rem;
+	color: $white;
+
+	a {
+		text-decoration: none;
+		color: $white;
+
+		&:visited {
+			color: $white;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: $mauve;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			outline: 0;
+		}
+	}
+}
+
+.footer-content {
+	padding: 1rem 0;
+	text-align: center;
+}
+
+
+
+// widgets
+.widget {
+	margin: 0 0 1.5em;
+}
+
+.widget-title {
+	text-transform: uppercase;
+	letter-spacing: .15rem;
+
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
 }
 
 // comments
