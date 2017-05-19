@@ -18,48 +18,6 @@ CSS structure
 #
 
 --------------------------------------------------------------*/
-html {
-  font-size: 16px;
-}
-
-@media (min-width: 320px) {
-  html {
-    font-size: calc( 16px + (19 - 16) * ( (100vw - 320px) / ( 660 - 320) ));
-  }
-}
-@media (min-width: 660px) {
-  html {
-    font-size: 19px;
-  }
-}
-/*
-h1 {@include ft-base(1.68rem); }
-h2 {@include ft-base(1.56rem);}
-h3 {@include ft-base(1.45rem);}
-h4 {@include ft-base(1.25rem);}
-h5 {@include ft-base(1.15rem);}
-h6 {@include ft-base(1.05rem);}
-
-
-@media screen and (min-width: 20rem) {
-h1 {@include ft-min(1.68rem, 2.35rem ); }
-h2 {@include ft-min(1.56rem, 1.93rem);}
-h3 {@include ft-min(1.45rem, 1.75rem);}
-h4 {@include ft-min(1.25rem, 1.56rem);}
-h5 {@include ft-min(1.15rem, 1.25rem);}
-h6 {@include ft-min(1.05rem, 1.125rem);}
-}
-
-@media screen and (min-width: 41.25rem ){
-h1 {@include ft-max(2.35rem); }
-h2 {@include ft-max(1.93rem);}
-h3 {@include ft-max(1.75rem);}
-h4 {@include ft-max(1.56rem);}
-h5 {@include ft-max(1.25rem);}
-h6 {@include ft-max(1.125rem);}
-	
-}
-*/
 /*--------------------------------------------------------------
 # reset/normalize
 --------------------------------------------------------------*/
@@ -492,14 +450,31 @@ h6 {
   font-family: "Hind", Tahoma, sans-serif;
 }
 
-/*
-h1 {@include ft-base(1.68rem); }
-h2 {@include ft-base(1.56rem);}
-h3 {@include ft-base(1.45rem);}
-h4 {@include ft-base(1.25rem);}
-h5 {@include ft-base(1.15rem);}
-h6 {@include ft-base(1.05rem);}*/
-@media screen and (min-width: 20rem) {
+h1 {
+  font-size: 1.68rem;
+}
+
+h2 {
+  font-size: 1.56rem;
+}
+
+h3 {
+  font-size: 1.45rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1.05rem;
+}
+
+@media screen and (min-width: 320px) {
   h1 {
     font-size: calc(1.68rem + 0.67 * (100vw - 20rem) / 21.25);
   }
@@ -524,7 +499,7 @@ h6 {@include ft-base(1.05rem);}*/
     font-size: calc(1.05rem + 0.075 * (100vw - 20rem) / 21.25);
   }
 }
-@media screen and (min-width: 41.25rem) {
+@media screen and (min-width: 660px) {
   h1 {
     font-size: 2.35rem;
   }
@@ -549,12 +524,6 @@ h6 {@include ft-base(1.05rem);}*/
     font-size: 1.125rem;
   }
 }
-/*h1 {font-size: 1.75rem;}
-h2 {font-size: 1.65rem;}
-h3 {font-size: 1.53rem;}
-h4 {font-size: 1.43rem;}
-h5 {font-size: 1.25rem;}
-h6 {font-size: 1.13rem;}*/
 p {
   margin-bottom: 1.5em;
 }

@@ -1,6 +1,11 @@
 // mixins
+//  Responsive font sizing. The size of the font will scale with the viewport based on the information that you provide it. Additional properties may be adding for things like padding.
 
-// fluid typography mixin for individual components
+// Credit to: 
+// Mike Riethmuller for responsive type concept/ https://madebymike.com.au/writing/precise-control-responsive-typography/
+// Original mixin implementation from Indrek Paas / http://www.sassmeister.com/gist/7f22e44ace49b5124eec
+// Strip function by: Miriam Suzanne / http://stackoverflow.com/a/12335841/1339786
+// Updated strip function implementation by: Hugo Giraudel / https://css-tricks.com/snippets/sass/strip-unit-function/
 
 $min-vw: 20rem;
 $max-vw: 41.25rem;
