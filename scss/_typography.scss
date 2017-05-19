@@ -3,6 +3,9 @@
 html {
 	//font-size: 16px;
 }
+html {
+	@include fluid-type(1rem, 1.1rem);
+}
 
 body,
 button,
@@ -14,7 +17,6 @@ textarea {
 	font-weight: 400;
 	line-height: 1.5;
 	font-size: 1rem;
-	//@include fluid-type(1rem, 1.25rem);
 }
 
 h1,
@@ -32,32 +34,13 @@ h6 {
 // 48 - 40 - 31 - 25 - 20 - 16
 // 27 - 25 - 23 - 21 - 19 - 17
 
-h1 {font-size: 1.68rem;}
-h2 {font-size: 1.56rem;}
-h3 {font-size: 1.45rem;}
-h4 {font-size: 1.25rem;}
-h5 {font-size: 1.15rem;}
-h6 {font-size: 1.05rem;}
+h1 {@include fluid-type(1.68rem, 2.35rem ); }
+h2 {@include fluid-type(1.56rem, 1.85rem);}
+h3 {@include fluid-type(1.45rem, 1.75rem);}
+h4 {@include fluid-type(1.25rem, 1.56rem);}
+h5 {@include fluid-type(1.15rem, 1.25rem);}
+h6 {@include fluid-type(1.05rem, 1.125rem);}
 
-
-@media screen and (min-width: 320px) {
-h1 {@include ft-min(1.68rem, 2.35rem ); }
-h2 {@include ft-min(1.56rem, 1.93rem);}
-h3 {@include ft-min(1.45rem, 1.75rem);}
-h4 {@include ft-min(1.25rem, 1.56rem);}
-h5 {@include ft-min(1.15rem, 1.25rem);}
-h6 {@include ft-min(1.05rem, 1.125rem);}
-}
-
-@media screen and (min-width: 660px ){
-h1 {@include ft-max(2.35rem); }
-h2 {@include ft-max(1.93rem);}
-h3 {@include ft-max(1.75rem);}
-h4 {@include ft-max(1.56rem);}
-h5 {@include ft-max(1.25rem);}
-h6 {@include ft-max(1.125rem);}
-	
-}
 
 
 p {

@@ -1,4 +1,5 @@
 // mixins
+
 //  Responsive font sizing. The size of the font will scale with the viewport based on the information that you provide it. Additional properties may be adding for things like padding.
 
 // Credit to: 
@@ -7,8 +8,9 @@
 // Strip function by: Miriam Suzanne / http://stackoverflow.com/a/12335841/1339786
 // Updated strip function implementation by: Hugo Giraudel / https://css-tricks.com/snippets/sass/strip-unit-function/
 
-$min-vw: 20rem;
-$max-vw: 41.25rem;
+//units for media queries
+$min-vw: 320px;
+$max-vw: 660px;
 
 @function strip-unit($number) {
 	@if type-of($number) == 'number' and not unitless($number) {
@@ -18,24 +20,46 @@ $max-vw: 41.25rem;
 	@return $number;
 }
 
-@mixin ft-base(
-$font-size-min,
-$properties: font-size
-) {
-		@each $property in $properties {#{$property}: $font-size-min;}
-} 
-	
-@mixin ft-min(
+@mixin fluid-type(
 $font-size-min,
 $font-size-max,
-$properties: font-size
+$properties: font-size,
+$vw-min: 20rem, //320px,
+$vw-max: 41.25rem //660px 
 ) {
-		@each $property in $properties {#{$property}: calc(#{$font-size-min} + #{strip-unit($font-size-max - $font-size-min)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});}
-}
 
-@mixin ft-max(
-$font-size-max,
-$properties: font-size
-) {
-		@each $property in $properties {#{$property}: $font-size-max;}
+	@if(
+    unitless($font-size-min) or
+    unitless($font-size-max) or
+    unitless($vw-min) or
+    unitless($vw-max)
+	) {
+		@error "All min and max properties must be provided with a unit (e.g.: px)";
+	}
+
+	@if(
+    unit($font-size-min) == unit($font-size-max) and
+    unit($font-size-min) == unit($vw-min) and
+    unit($font-size-min) == unit($vw-max)
+	) {
+		@each $property in $properties {
+			#{$property}: $font-size-min;
+		}
+
+		@media screen and (min-width: $min-vw) {
+			@each $property in $properties {
+				#{$property}: calc(#{$font-size-min} + #{strip-unit($font-size-max - $font-size-min)} * (100vw - #{$vw-min}) / #{strip-unit($vw-max - $vw-min)});
+			}
+		}
+
+		@media screen and (min-width: $max-vw) {
+			@each $property in $properties {
+				#{$property}: $font-size-max;
+			}
+		}
+	} @else {
+		@error "All units must be the same. Incompatible units were passed:
+		#{unit($font-size-min)}, #{unit($font-size-max)}, #{unit($vw-min)},
+		#{unit($vw-max)}";
+	}
 }
