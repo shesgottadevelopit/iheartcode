@@ -1,86 +1,64 @@
 // mixins
 
+$min-vw: 20rem;
+$max-vw: 41.25rem;
+
+@function strip-unit($number) {
+	@if type-of($number) == 'number' and not unitless($number) {
+		@return $number / ($number * 0 + 1);
+	}
+
+	@return $number;
+}
+
+@mixin ft-base(
+$font-size-min,
+$properties: font-size
+) {
+		@each $property in $properties {#{$property}: $font-size-min;}
+} 
+	
+@mixin ft-min(
+$font-size-min,
+$font-size-max,
+$properties: font-size
+) {
+		@each $property in $properties {#{$property}: calc(#{$font-size-min} + #{strip-unit($font-size-max - $font-size-min)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});}
+}
+
+@mixin ft-max(
+$font-size-max,
+$properties: font-size
+) {
+		@each $property in $properties {#{$property}: $font-size-max;}
+}
+
+//usage
 /*
-// Responsive Typography Mixin  - MadebyMike.com
-
-// These values are the minimum and maximum viewport sizes to apply the font scaling
-$min_width: 400;
-$max_width: 800;
-
-// These values represent the range of fon-tsize to apply  
-// These values effect the base font-size, headings and other elements will scale proportionally
-$min_font: 12;
-$max_font: 24; 
-
-:root { font-size: #{$min_font}px; }
-
-// This part is a little bit ugly, I will explain what is going on in a blog post soon.
-@media (min-width: #{$min_width}px) and (max-width: #{$max_width}px){
-  :root { 
-    font-size: calc( #{$min_font}px + (#{$max_font} - #{$min_font}) * ( (100vw - #{$min_width}px) / ( #{$max_width} - #{$min_width}) ));
-  }
-}
-@media (min-width: #{$max_width}px){
-   :root { 
-     font-size: #{$max_font}px;
-   }
-}
-*/
+h1 {@include ft-base(1.68rem); }
+h2 {@include ft-base(1.56rem);}
+h3 {@include ft-base(1.45rem);}
+h4 {@include ft-base(1.25rem);}
+h5 {@include ft-base(1.15rem);}
+h6 {@include ft-base(1.05rem);}
 
 
-//**** Viewport sized typography with minimum and maximum values
-/* NOTES
-@author Eduardo Boucas (@eduardoboucas)
-@link https://eduardoboucas.com/blog/2015/06/18/viewport-sized-typography-with-minimum-and-maximum-sizes.html
-@param {Number}   $responsive  - Viewport-based size
-@param {Number}   $min         - Minimum font size (px)
-@param {Number}   $max         - Maximum font size (px)(optional)
-@param {Number}   $fallback    - Fallback for viewport-based units (optional)
-@example scss - 5vw font size (with 50px fallback), 
-                 minumum of 35px and maximum of 150px
-@include responsive-font(5vw, 35px, 150px, 50px);
-*/
-
-// mixin code
-/*
-@mixin responsive-font($responsive, $min, $max: false, $fallback: false) {
-  $responsive-unitless: $responsive / ($responsive - $responsive + 1);
-  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
-  $min-breakpoint: $min / $responsive-unitless * 100;
-  
-  @media (max-#{$dimension}: #{$min-breakpoint}) {
-    font-size: $min;
-  }
-  
-  @if $max {
-    $max-breakpoint: $max / $responsive-unitless * 100;
-    
-    @media (min-#{$dimension}: #{$max-breakpoint}) {
-      font-size: $max;
-    }
-  }
-  
-  @if $fallback {
-    font-size: $fallback;
-  }
-  
-  font-size: $responsive;
+@media screen and (min-width: 20rem) {
+h1 {@include ft-min(1.68rem, 2.35rem ); }
+h2 {@include ft-min(1.56rem, 1.93rem);}
+h3 {@include ft-min(1.45rem, 1.75rem);}
+h4 {@include ft-min(1.25rem, 1.56rem);}
+h5 {@include ft-min(1.15rem, 1.25rem);}
+h6 {@include ft-min(1.05rem, 1.125rem);}
 }
 
-*/
-
-/**** USAGE
-.no-limits {
-  font-size: 3vw;
+@media screen and (min-width: 41.25rem ){
+h1 {@include ft-max(2.35rem); }
+h2 {@include ft-max(1.93rem);}
+h3 {@include ft-max(1.75rem);}
+h4 {@include ft-max(1.56rem);}
+h5 {@include ft-max(1.25rem);}
+h6 {@include ft-max(1.125rem);}
+	
 }
-
-.limit-min {
-  @include responsive-font(3vw, 20px);
-}
-
-.limit-min-max {
-  @include responsive-font(3vw, 20px, 50px);
-}
-
-
 */

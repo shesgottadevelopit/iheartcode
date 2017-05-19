@@ -1,7 +1,7 @@
 // typography
 
 html {
-	font-size: 16px;
+	//font-size: 16px;
 }
 
 body,
@@ -11,9 +11,10 @@ select,
 textarea {
 	color: $offblack;
 	font-family: "Inconsolata", "Karla", Tahoma, sans-serif;
-	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.5;
+	font-size: 1rem;
+	//@include fluid-type(1rem, 1.25rem);
 }
 
 h1,
@@ -25,8 +26,46 @@ h6 {
 	clear: both;
 	margin: 0;
 	font-family: "Hind", Tahoma, sans-serif;
-	//font-weight: 600;
 }
+
+// baseline font sizes in pixels for HEADING elements
+// 48 - 40 - 31 - 25 - 20 - 16
+// 27 - 25 - 23 - 21 - 19 - 17
+
+/*
+h1 {@include ft-base(1.68rem); }
+h2 {@include ft-base(1.56rem);}
+h3 {@include ft-base(1.45rem);}
+h4 {@include ft-base(1.25rem);}
+h5 {@include ft-base(1.15rem);}
+h6 {@include ft-base(1.05rem);}*/
+
+
+@media screen and (min-width: 20rem) {
+h1 {@include ft-min(1.68rem, 2.35rem ); }
+h2 {@include ft-min(1.56rem, 1.93rem);}
+h3 {@include ft-min(1.45rem, 1.75rem);}
+h4 {@include ft-min(1.25rem, 1.56rem);}
+h5 {@include ft-min(1.15rem, 1.25rem);}
+h6 {@include ft-min(1.05rem, 1.125rem);}
+}
+
+@media screen and (min-width: 41.25rem ){
+h1 {@include ft-max(2.35rem); }
+h2 {@include ft-max(1.93rem);}
+h3 {@include ft-max(1.75rem);}
+h4 {@include ft-max(1.56rem);}
+h5 {@include ft-max(1.25rem);}
+h6 {@include ft-max(1.125rem);}
+	
+}
+
+/*h1 {font-size: 1.75rem;}
+h2 {font-size: 1.65rem;}
+h3 {font-size: 1.53rem;}
+h4 {font-size: 1.43rem;}
+h5 {font-size: 1.25rem;}
+h6 {font-size: 1.13rem;}*/
 
 p {
 	margin-bottom: 1.5em;
