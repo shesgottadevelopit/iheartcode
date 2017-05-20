@@ -9,11 +9,15 @@
 		
 		<div class="article-meta">
 			<div class="single-meta">
-				<span class="article-categories"><?php the_category(' '); ?></span> 
+				<span class="article-categories"><?php the_category(' & '); ?></span> 
 				<span style="color:white"> | </span>
 				<span><?php echo get_the_date("l // F j, Y"); ?></span>
 			</div>
-	
+		<div><!--featured image -->
+			<a href="<?php the_permalink(); ?>">
+				<?php the_post_thumbnail(); ?>
+			</a>
+		</div>
 		<?php
 		if ( is_single() ) :
 			the_title( '<h2 class="article-title">', '</h2>' );
@@ -24,16 +28,9 @@
 		if ( 'post' === get_post_type() ) : ?>
 			<div class="article-tags">
 				<?php echo get_the_tag_list('<span class="article-tag">','</span><span class="article-tag">','</span>'); ?>
-				<?php //echo get_tags(); ?>
-				<?php //the_tags(); ?>
 			</div>
 		</div>
 
-		<div><!--featured image -->
-			<a href="<?php the_permalink(); ?>">
-				<?php the_post_thumbnail(); ?>
-			</a>
-		</div>
 		<?php
 		endif; ?>
 	</header>
