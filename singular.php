@@ -13,7 +13,7 @@ get_header(); ?>
 			get_template_part( 'content' );
 
 			if ( get_post_type() === 'post' ) {
-			// insert navigation or pagination
+			// insert navigation
 			the_post_navigation();
 			}
 			//comments - if applicable
