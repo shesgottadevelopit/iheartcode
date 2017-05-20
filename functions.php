@@ -77,7 +77,7 @@ add_action( 'after_setup_theme', 'back2basics_setup' );
  * @global int $content_width
  */
 function back2basics_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'back2basics_content_width', 660 );
+	$GLOBALS['content_width'] = apply_filters( 'back2basics_content_width', 695 );
 }
 add_action( 'after_setup_theme', 'back2basics_content_width', 0 );
 

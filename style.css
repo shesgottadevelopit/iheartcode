@@ -240,7 +240,7 @@ html, body {
 }
 
 .site-page {
-  max-width: 660px;
+  max-width: 695px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 1rem 0;
@@ -433,10 +433,10 @@ html {
 }
 @media screen and (min-width: 320px) {
   html {
-    font-size: calc(1rem + 0.02 * (100vw - 20rem) / 21.25);
+    font-size: calc(1rem + 0.02 * (100vw - 20rem) / 23.4375);
   }
 }
-@media screen and (min-width: 660px) {
+@media screen and (min-width: 695px) {
   html {
     font-size: 1.02rem;
   }
@@ -470,10 +470,10 @@ h1 {
 }
 @media screen and (min-width: 320px) {
   h1 {
-    font-size: calc(1.68rem + 0.67 * (100vw - 20rem) / 21.25);
+    font-size: calc(1.68rem + 0.67 * (100vw - 20rem) / 23.4375);
   }
 }
-@media screen and (min-width: 660px) {
+@media screen and (min-width: 695px) {
   h1 {
     font-size: 2.35rem;
   }
@@ -484,10 +484,10 @@ h2 {
 }
 @media screen and (min-width: 320px) {
   h2 {
-    font-size: calc(1.56rem + 0.29 * (100vw - 20rem) / 21.25);
+    font-size: calc(1.56rem + 0.29 * (100vw - 20rem) / 23.4375);
   }
 }
-@media screen and (min-width: 660px) {
+@media screen and (min-width: 695px) {
   h2 {
     font-size: 1.85rem;
   }
@@ -498,10 +498,10 @@ h3 {
 }
 @media screen and (min-width: 320px) {
   h3 {
-    font-size: calc(1.45rem + 0.3 * (100vw - 20rem) / 21.25);
+    font-size: calc(1.45rem + 0.3 * (100vw - 20rem) / 23.4375);
   }
 }
-@media screen and (min-width: 660px) {
+@media screen and (min-width: 695px) {
   h3 {
     font-size: 1.75rem;
   }
@@ -512,10 +512,10 @@ h4 {
 }
 @media screen and (min-width: 320px) {
   h4 {
-    font-size: calc(1.25rem + 0.31 * (100vw - 20rem) / 21.25);
+    font-size: calc(1.25rem + 0.31 * (100vw - 20rem) / 23.4375);
   }
 }
-@media screen and (min-width: 660px) {
+@media screen and (min-width: 695px) {
   h4 {
     font-size: 1.56rem;
   }
@@ -526,10 +526,10 @@ h5 {
 }
 @media screen and (min-width: 320px) {
   h5 {
-    font-size: calc(1.15rem + 0.1 * (100vw - 20rem) / 21.25);
+    font-size: calc(1.15rem + 0.1 * (100vw - 20rem) / 23.4375);
   }
 }
-@media screen and (min-width: 660px) {
+@media screen and (min-width: 695px) {
   h5 {
     font-size: 1.25rem;
   }
@@ -540,10 +540,10 @@ h6 {
 }
 @media screen and (min-width: 320px) {
   h6 {
-    font-size: calc(1.05rem + 0.075 * (100vw - 20rem) / 21.25);
+    font-size: calc(1.05rem + 0.075 * (100vw - 20rem) / 23.4375);
   }
 }
-@media screen and (min-width: 660px) {
+@media screen and (min-width: 695px) {
   h6 {
     font-size: 1.125rem;
   }
@@ -674,10 +674,10 @@ big {
 }
 @media screen and (min-width: 320px) {
   .single .article-title {
-    font-size: calc(1.67rem + 0.43 * (100vw - 20rem) / 21.25);
+    font-size: calc(1.67rem + 0.43 * (100vw - 20rem) / 23.4375);
   }
 }
-@media screen and (min-width: 660px) {
+@media screen and (min-width: 695px) {
   .single .article-title {
     font-size: 2.1rem;
   }
@@ -745,10 +745,10 @@ big {
 }
 @media screen and (min-width: 320px) {
   .single .article-content {
-    font-size: calc(1rem + 0.085 * (100vw - 20rem) / 21.25);
+    font-size: calc(1rem + 0.085 * (100vw - 20rem) / 23.4375);
   }
 }
-@media screen and (min-width: 660px) {
+@media screen and (min-width: 695px) {
   .single .article-content {
     font-size: 1.085rem;
   }
@@ -765,10 +765,10 @@ big {
 }
 @media screen and (min-width: 320px) {
   .single-meta {
-    font-size: calc(0.75rem + 0.2 * (100vw - 20rem) / 21.25);
+    font-size: calc(0.75rem + 0.2 * (100vw - 20rem) / 23.4375);
   }
 }
-@media screen and (min-width: 660px) {
+@media screen and (min-width: 695px) {
   .single-meta {
     font-size: 0.95rem;
   }
@@ -817,10 +817,10 @@ big {
 }
 @media screen and (min-width: 320px) {
   .site-widgets {
-    font-size: calc(1rem + 0.02 * (100vw - 20rem) / 21.25);
+    font-size: calc(1rem + 0.02 * (100vw - 20rem) / 23.4375);
   }
 }
-@media screen and (min-width: 660px) {
+@media screen and (min-width: 695px) {
   .site-widgets {
     font-size: 1.02rem;
   }
