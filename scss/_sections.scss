@@ -251,6 +251,17 @@
 
 .site-widgets {
 	@include fluid-type(1rem, 1.02rem);
+	
+	ul {
+		list-style: none;
+		border-left: 3px $mauve solid;
+		padding-left: 1rem;
+		margin-left: 1rem;
+	}
+	
+	a {
+		text-decoration: none;
+	}
 }
 .widget {
 	margin: 0 0 1.5em;

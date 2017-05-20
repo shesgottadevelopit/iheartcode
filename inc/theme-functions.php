@@ -1,8 +1,77 @@
 <?php
+
 /**
  * Theme-specific functions, toggle comments to activate
  * @package back2basics
  */
+
+/**
+ * Custom pagination for akudo.codes
+ */
+function myPagination() {
+	global $wp_query;
+	
+	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
+		return;
+	}
+
+	$big = 999999999; // need an unlikely integer
+
+	echo paginate_links(array(
+		'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+		'format' => '?paged=%#%',
+		'current' => max(1, get_query_var('paged')),
+		'total' => $wp_query->max_num_pages,
+		'show_all' => false,
+		'prev_next' => true,
+		'prev_text' => __('&laquo; Previous'),
+		'next_text' => __('Next &raquo;'),
+		'end_size' => 1,
+		'mid_size' => 2,
+		'type' => 'plain',
+		'before_page_number' => '<span class="love">',
+		'after_page_number' => '</span>'
+	));
+}
+
+function myPagination2() {
+	global $wp_query;
+	
+	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
+		return;
+	}
+
+	$big = 999999999; // need an unlikely integer
+	$current_page = max(1, get_query_var('paged'));
+	$pages = $wp_query->max_num_pages;
+
+	$links = paginate_links(array(
+		'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+		'format' => '?paged=%#%',
+		'current' => max(1, get_query_var('paged')),
+		'total' => $wp_query->max_num_pages,
+		'show_all' => false,
+		'prev_next' => true,
+		'prev_text' => __('&laquo; Previous'),
+		'next_text' => __('Next &raquo;'),
+		'end_size' => 1,
+		'mid_size' => 2,
+		'type' => 'plain',
+		'before_page_number' => '<span class="love">',
+		'after_page_number' => '</span>'
+	));
+	
+	if ( $links ) :
+		?>
+	<nav role="navigation">
+		<h4 class="screen-reader-text"><?php _e( 'Posts navigation', 'back2basics' ); ?></h4>
+		<?php
+		printf(__('<span class="nav-links-pre">Page %s of %s</span>', 'back2basics'), $current_page, $pages);
+		echo $links; ?>
+	</nav>
+	<?php
+	endif;
+}
 
 /**
  * Custom pagination function outputs number of pages within navigation loop
@@ -12,8 +81,8 @@
 function back2basics_pagination() {
 	global $wp_query;
 
-	$current_page = max( 1, get_query_var('paged') );
-    $pages = $wp_query->max_num_pages;
+	$current_page = max(1, get_query_var('paged'));
+	$pages = $wp_query->max_num_pages;
 	$big = 999999999; // need an unlikely integer
 
 
@@ -21,14 +90,14 @@ function back2basics_pagination() {
 	$next_posts = get_next_posts_link('<span class="icon ic-chevron-right post-nav"></span>');
 
 
-		echo '<nav class="navigation posts-navigation" role="navigation">';
-        echo '<h2 class="screen-reader-text">'. esc_html__( 'Posts navigation', 'back2basics' ). '</h2>';
-		echo '<div class="nav-links"><div class="nav-flex">';
-		echo '<div class="nav-previous-index">'. $previous_posts . '</div>';
-		printf( __('<div class="nav-links-pre">Page %s of %s</div>', 'back2basics'), $current_page, $pages );
-		echo '<div class="nav-next-index">'. $next_posts . '</div>';
-		echo '</div></div>';
-        echo '</nav>';
+	echo '<nav class="navigation posts-navigation" role="navigation">';
+	echo '<h2 class="screen-reader-text">' . esc_html__('Posts navigation', 'back2basics') . '</h2>';
+	echo '<div class="nav-links"><div class="nav-flex">';
+	echo '<div class="nav-previous-index">' . $previous_posts . '</div>';
+	printf(__('<div class="nav-links-pre">Page %s of %s</div>', 'back2basics'), $current_page, $pages);
+	echo '<div class="nav-next-index">' . $next_posts . '</div>';
+	echo '</div></div>';
+	echo '</nav>';
 }
 
 /**
@@ -38,43 +107,43 @@ function back2basics_pagination() {
 function back2basics_excerpt_more($more) {
 	return " ...";
 }
-add_filter( 'excerpt_more', 'back2basics_excerpt_more');
+
+add_filter('excerpt_more', 'back2basics_excerpt_more');
 
 /**
  * Adds support for excerpts on pages
  */
-
 function back2basics_add_excerpts_to_pages() {
 	add_post_type_support('page', 'excerpt');
 }
-add_action( 'init', 'back2basics_add_excerpts_to_pages' );
+
+add_action('init', 'back2basics_add_excerpts_to_pages');
 
 /**
  * Utility function to check if a gravatar exists for a given email or id
  * @param int|string|object $id_or_email A user ID,  email address, or comment object
  * @return bool if the gravatar exists or not
  */
-
 function validate_gravatar($id_or_email) {
-  //id or email code borrowed from wp-includes/pluggable.php
+	//id or email code borrowed from wp-includes/pluggable.php
 	$email = '';
-	if ( is_numeric($id_or_email) ) {
+	if (is_numeric($id_or_email)) {
 		$id = (int) $id_or_email;
 		$user = get_userdata($id);
-		if ( $user )
+		if ($user)
 			$email = $user->user_email;
-	} elseif ( is_object($id_or_email) ) {
+	} elseif (is_object($id_or_email)) {
 		// No avatar for pingbacks or trackbacks
-		$allowed_comment_types = apply_filters( 'get_avatar_comment_types', array( 'comment' ) );
-		if ( ! empty( $id_or_email->comment_type ) && ! in_array( $id_or_email->comment_type, (array) $allowed_comment_types ) )
+		$allowed_comment_types = apply_filters('get_avatar_comment_types', array('comment'));
+		if (!empty($id_or_email->comment_type) && !in_array($id_or_email->comment_type, (array) $allowed_comment_types))
 			return false;
 
-		if ( !empty($id_or_email->user_id) ) {
+		if (!empty($id_or_email->user_id)) {
 			$id = (int) $id_or_email->user_id;
 			$user = get_userdata($id);
-			if ( $user)
+			if ($user)
 				$email = $user->user_email;
-		} elseif ( !empty($id_or_email->comment_author_email) ) {
+		} elseif (!empty($id_or_email->comment_author_email)) {
 			$email = $id_or_email->comment_author_email;
 		}
 	} else {
@@ -87,29 +156,29 @@ function validate_gravatar($id_or_email) {
 	$data = wp_cache_get($hashkey);
 	if (false === $data) {
 		$response = wp_remote_head($uri);
-		if( is_wp_error($response) ) {
+		if (is_wp_error($response)) {
 			$data = 'not200';
 		} else {
 			$data = $response['response']['code'];
 		}
-	    wp_cache_set($hashkey, $data, $group = '', $expire = 60*5);
-
+		wp_cache_set($hashkey, $data, $group = '', $expire = 60 * 5);
 	}
-	if ($data == '200'){
+	if ($data == '200') {
 		return true;
 	} else {
 		return false;
 	}
 }
+
 /**
  * Ignore sticky posts in main query on the home page
  *
  */
 add_action('pre_get_posts', 'back2basics_ignore_stickyposts');
 
-function back2basics_ignore_stickyposts ( $query ) {
+function back2basics_ignore_stickyposts($query) {
 	if (is_home() && $query->is_main_query()) {
-		$query->set( 'ignore_sticky_posts', true );
+		$query->set('ignore_sticky_posts', true);
 	}
 }
 
@@ -123,14 +192,13 @@ add_action('pre_get_posts', 'back2basics_query_offset', 1);
 function back2basics_query_offset($query) {
 
 	//Offset the main query on the home page
-	if ( $query->is_home() && $query->is_main_query()&& !$query->is_paged() ) {
-		$query->set( 'offset', '1' );
+	if ($query->is_home() && $query->is_main_query() && !$query->is_paged()) {
+		$query->set('offset', '1');
 	}
 
 	//Everything below fixes pagination due to offset on main query
-
 	//Before anything else, make sure this is the right query...
-	if (!$query->is_home() && $query->is_main_query() ) {
+	if (!$query->is_home() && $query->is_main_query()) {
 		return;
 	}
 
@@ -150,37 +218,39 @@ function back2basics_query_offset($query) {
 		$query->set('offset', $page_offset);
 	}
 }
+
 // Escape HTML in <code> or <pre><code> tags.
 function escapeHTML($arr) {
 
-    if (version_compare(PHP_VERSION, '5.2.3') >= 0) {
+	if (version_compare(PHP_VERSION, '5.2.3') >= 0) {
 
-        $output = htmlspecialchars($arr[2], ENT_NOQUOTES, get_bloginfo('charset'), false);
-    }
-    else {
-        $specialChars = array(
-            '&' => '&amp;',
-            '<' => '&lt;',
-            '>' => '&gt;'
-        );
+		$output = htmlspecialchars($arr[2], ENT_NOQUOTES, get_bloginfo('charset'), false);
+	} else {
+		$specialChars = array(
+			'&' => '&amp;',
+			'<' => '&lt;',
+			'>' => '&gt;'
+		);
 
-        // decode already converted data
-        $data = htmlspecialchars_decode($arr[2]);
-        // escapse all data inside <pre>
-        $output = strtr($data, $specialChars);
-    }
-    if (! empty($output)) {
-        return  $arr[1] . $output . $arr[3];
-    }   else    {
-        return  $arr[1] . $arr[2] . $arr[3];
-    }
+		// decode already converted data
+		$data = htmlspecialchars_decode($arr[2]);
+		// escapse all data inside <pre>
+		$output = strtr($data, $specialChars);
+	}
+	if (!empty($output)) {
+		return $arr[1] . $output . $arr[3];
+	} else {
+		return $arr[1] . $arr[2] . $arr[3];
+	}
 }
+
 function filterCode($data) { // Uncomment if you want to escape anything within a <pre> tag
-    //$modifiedData = preg_replace_callback('@(<pre.*>)(.*)(<\/pre>)@isU', 'escapeHTML', $data);
-    $modifiedData = preg_replace_callback('@(<code.*>)(.*)(<\/code>)@isU', 'escapeHTML', $data);
-    $modifiedData = preg_replace_callback('@(<tt.*>)(.*)(<\/tt>)@isU', 'escapeHTML', $modifiedData);
+	//$modifiedData = preg_replace_callback('@(<pre.*>)(.*)(<\/pre>)@isU', 'escapeHTML', $data);
+	$modifiedData = preg_replace_callback('@(<code.*>)(.*)(<\/code>)@isU', 'escapeHTML', $data);
+	$modifiedData = preg_replace_callback('@(<tt.*>)(.*)(<\/tt>)@isU', 'escapeHTML', $modifiedData);
 
-    return $modifiedData;
+	return $modifiedData;
 }
-add_filter( 'content_save_pre', 'filterCode', 9 );
-add_filter( 'excerpt_save_pre', 'filterCode', 9 );
+
+add_filter('content_save_pre', 'filterCode', 9);
+add_filter('excerpt_save_pre', 'filterCode', 9);

@@ -118,6 +118,17 @@ a {
 	}
 }
 
+// pagination & post-navigation
+
+.page-nums {
+	background-color: $mauve;
+	border-radius: 5px;
+	padding: 0.45rem;
+	font-size: .75rem;
+	
+	
+}
+
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {

@@ -825,6 +825,15 @@ big {
     font-size: 1.02rem;
   }
 }
+.site-widgets ul {
+  list-style: none;
+  border-left: 3px #b97375 solid;
+  padding-left: 1rem;
+  margin-left: 1rem;
+}
+.site-widgets a {
+  text-decoration: none;
+}
 
 .widget {
   margin: 0 0 1.5em;
@@ -1026,6 +1035,13 @@ a:hover, a:active {
     display: block;
   }
 }
+.page-nums {
+  background-color: #b97375;
+  border-radius: 5px;
+  padding: 0.45rem;
+  font-size: .75rem;
+}
+
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {

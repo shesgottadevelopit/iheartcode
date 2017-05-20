@@ -132,6 +132,11 @@ add_action( 'wp_enqueue_scripts', 'back2basics_fonts' );
 require get_template_directory() . '/admin/custom-admin.php';
 
 /**
+ * Implement Theme Functions
+ */
+require get_template_directory() . '/inc/theme-functions.php';
+
+/**
  * Implement the Custom Header feature.
  */
 //require get_template_directory() . '/inc/custom-header.php';
