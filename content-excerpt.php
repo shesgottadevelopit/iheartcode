@@ -5,7 +5,7 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header style="text-align:center;">
+	<header class="article-header">
 		<?php the_title( '<h2 class="article-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );?>
 		<div class="article-meta">
 		<span class="article-date"><?php echo get_the_date("l // F j, Y"); ?></span>

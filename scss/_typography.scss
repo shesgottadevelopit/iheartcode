@@ -1,10 +1,8 @@
 // typography
 
 html {
-	//font-size: 16px;
-}
-html {
-	@include fluid-type(1rem, 1.1rem);
+	font-size: 16px;
+	@include fluid-type(1rem, 1.02rem);
 }
 
 body,

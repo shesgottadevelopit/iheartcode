@@ -428,16 +428,17 @@ table {
 # typography/icons
 --------------------------------------------------------------*/
 html {
+  font-size: 16px;
   font-size: 1rem;
 }
 @media screen and (min-width: 320px) {
   html {
-    font-size: calc(1rem + 0.1 * (100vw - 20rem) / 21.25);
+    font-size: calc(1rem + 0.02 * (100vw - 20rem) / 21.25);
   }
 }
 @media screen and (min-width: 660px) {
   html {
-    font-size: 1.1rem;
+    font-size: 1.02rem;
   }
 }
 
@@ -635,7 +636,7 @@ big {
 }
 
 .site-description {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 .sticky {
@@ -656,9 +657,36 @@ big {
   margin: 0 0 1.5em;
 }
 
+.article-header, .single .article-header {
+  text-align: center;
+}
+
+.single .article-header {
+  background-color: #2e382e;
+  padding-top: 1.25rem;
+  padding-bottom: 4rem;
+}
+
+.single .article-title {
+  font-size: 1.67rem;
+  text-align: center;
+  color: #ffffff;
+}
+@media screen and (min-width: 320px) {
+  .single .article-title {
+    font-size: calc(1.67rem + 0.43 * (100vw - 20rem) / 21.25);
+  }
+}
+@media screen and (min-width: 660px) {
+  .single .article-title {
+    font-size: 2.1rem;
+  }
+}
+
 .article-title {
   font-weight: 700;
   color: #5c5346;
+  font-size: 1.67rem;
 }
 .article-title a {
   font-weight: 600;
@@ -675,6 +703,25 @@ big {
   outline: 0;
 }
 
+.article-tags {
+  padding-top: .75rem;
+}
+
+.single .article-tag, .single .article-tags a {
+  font-size: .75rem;
+  padding-right: .4rem;
+  color: #b97375;
+}
+.single .article-tag:visited, .single .article-tags a:visited {
+  color: #b97375;
+}
+.single .article-tag:hover, .single .article-tag:focus, .single .article-tag:active, .single .article-tags a:hover, .single .article-tags a:focus, .single .article-tags a:active {
+  color: #848c8e;
+}
+.single .article-tag:hover, .single .article-tag:focus, .single .article-tag:active, .single .article-tags a:hover, .single .article-tags a:focus, .single .article-tags a:active {
+  outline: 0;
+}
+
 .article-tag, .article-tags a {
   font-size: .75rem;
   padding-right: .4rem;
@@ -686,8 +733,46 @@ big {
   font-weight: 700;
 }
 
+.single .article-content {
+  background-color: #fdeee9;
+  z-index: 3;
+  position: relative;
+  margin-top: -1.75rem;
+  padding: .25rem 1.25rem 0;
+}
+
 .article-content {
   margin: 1.5em 0 0;
+}
+
+.single-meta {
+  font-size: 0.75rem;
+  color: #fdeee9;
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 320px) {
+  .single-meta {
+    font-size: calc(0.75rem + 0.2 * (100vw - 20rem) / 21.25);
+  }
+}
+@media screen and (min-width: 660px) {
+  .single-meta {
+    font-size: 0.95rem;
+  }
+}
+.single-meta a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 400;
+}
+.single-meta a:visited {
+  color: #ffffff;
+}
+.single-meta a:hover, .single-meta a:focus, .single-meta a:active {
+  color: #b97375;
+}
+.single-meta a:hover, .single-meta a:focus, .single-meta a:active {
+  outline: 0;
 }
 
 .site-footer {
@@ -721,6 +806,7 @@ big {
 .widget-title {
   text-transform: uppercase;
   letter-spacing: .15rem;
+  font-size: 1.35rem;
 }
 
 /* Make sure select elements fit in widgets. */

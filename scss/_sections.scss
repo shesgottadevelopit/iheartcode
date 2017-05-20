@@ -46,7 +46,7 @@
 }
 
 .site-description {
-	font-size: 1.1rem; 
+	font-size: 1.05rem; 
 
 }
 
@@ -75,10 +75,26 @@
 	margin: 0 0 1.5em;
 }
 
+.article-header {
+	text-align: center;
+}
 
+.single .article-header {
+	background-color: $offblack;
+	padding-top: 1.25rem;
+	padding-bottom: 4rem;
+	@extend .article-header;
+}
+
+.single .article-title {
+	@include fluid-type(1.67rem, 2.1rem );
+	text-align: center;
+	color: $white;
+}
 .article-title {
 	font-weight: 700;
 	color: $lightbrown;
+	font-size: 1.67rem;
 	
 	a {
 		font-weight: 600;
@@ -108,20 +124,85 @@
 	
 }
 
-.article-tags {}
+.article-tags {
+	padding-top: .75rem;
+}
+
+.single .article-tag, .single .article-tags a {
+	font-size: .75rem;
+	padding-right: .4rem;
+	color: $mauve;
+	
+	&:visited {
+			color: $mauve;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: $greyblue;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			outline: 0;
+		}
+}
 
 .article-tag, .article-tags a {
 	font-size: .75rem;
 	padding-right: .4rem;
 	color: $greyblue;
+	
 }
 .article-date {
 	color: $candy;
 	font-weight: 700;
 }
 
+.single .article-content {
+	background-color: $cream;
+	z-index: 3;
+	position: relative;
+	//top: -1.75rem;
+	margin-top: -1.75rem; // need to disable @extend for this to work and not be overridden
+	padding: .25rem 1.25rem 0;
+}
+
 .article-content {
 	margin: 1.5em 0 0;
+}
+
+.single-meta {
+	@include fluid-type(.75rem, .95rem);
+	//font-size: .75rem;
+	color: $cream;
+	padding-bottom: 1rem;
+	
+	a {
+		text-decoration: none;
+		color: $white;
+		font-weight: 400;
+
+		&:visited {
+			color: $white;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: $mauve;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			outline: 0;
+		}
+	}
+	
+	
 }
 
 // footer
@@ -167,6 +248,7 @@
 .widget-title {
 	text-transform: uppercase;
 	letter-spacing: .15rem;
+	font-size: 1.35rem;
 
 }
 

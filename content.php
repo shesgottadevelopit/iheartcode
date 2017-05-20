@@ -5,18 +5,30 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header>
+	<header class="article-header full-width-bar">
+		
+		<div class="article-meta">
+			<div class="single-meta">
+				<span class="article-categories"><?php the_category(' '); ?></span> 
+				<span style="color:white"> | </span>
+				<span><?php echo get_the_date("l // F j, Y"); ?></span>
+			</div>
+	
 		<?php
 		if ( is_single() ) :
-			the_title( '<h1>', '</h1>' );
+			the_title( '<h2 class="article-title">', '</h2>' );
 		else :
-			the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			the_title( '<h2 class="article-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
 		if ( 'post' === get_post_type() ) : ?>
-		<div>
-			<!-- add entry meta -->
+			<div class="article-tags">
+				<?php echo get_the_tag_list('<span class="article-tag">','</span><span class="article-tag">','</span>'); ?>
+				<?php //echo get_tags(); ?>
+				<?php //the_tags(); ?>
+			</div>
 		</div>
+
 		<div><!--featured image -->
 			<a href="<?php the_permalink(); ?>">
 				<?php the_post_thumbnail(); ?>
@@ -26,7 +38,7 @@
 		endif; ?>
 	</header>
 
-	<div>
+	<div class="article-content">
 		<?php the_content( sprintf(
 				/* translators: %s: Name of current post. */
 				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'back2basics' ), array( 'span' => array( 'class' => array() ) ) ),
