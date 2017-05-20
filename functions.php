@@ -1,9 +1,9 @@
 <?php
 /**
  * theme functions
- * @package back2basics
+ * @package iheartcode
  */
-if ( ! function_exists( 'back2basics_setup' ) ) :
+if ( ! function_exists( 'iheartcode_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -11,14 +11,14 @@ if ( ! function_exists( 'back2basics_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function back2basics_setup() {
+function iheartcode_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on back2basics, use a find and replace
-	 * to change 'back2basics' to the name of your theme in all the template files.
+	 * If you're building a theme based on iheartcode, use a find and replace
+	 * to change 'iheartcode' to the name of your theme in all the template files.
 	 */
-	//load_theme_textdomain( 'back2basics', get_template_directory() . '/languages' );
+	//load_theme_textdomain( 'iheartcode', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -42,7 +42,7 @@ function back2basics_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', 'back2basics' ),
+		'menu-1' => esc_html__( 'Primary', 'iheartcode' ),
 	) );
 
 	/*
@@ -58,7 +58,7 @@ function back2basics_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'back2basics_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'iheartcode_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
@@ -67,7 +67,7 @@ function back2basics_setup() {
 	add_theme_support( 'customize-selective-refresh-widgets' );
 }
 endif;
-add_action( 'after_setup_theme', 'back2basics_setup' );
+add_action( 'after_setup_theme', 'iheartcode_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -76,53 +76,53 @@ add_action( 'after_setup_theme', 'back2basics_setup' );
  *
  * @global int $content_width
  */
-function back2basics_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'back2basics_content_width', 695 );
+function iheartcode_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'iheartcode_content_width', 695 );
 }
-add_action( 'after_setup_theme', 'back2basics_content_width', 0 );
+add_action( 'after_setup_theme', 'iheartcode_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function back2basics_widgets_init() {
+function iheartcode_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'back2basics' ),
+		'name'          => esc_html__( 'Sidebar', 'iheartcode' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'back2basics' ),
+		'description'   => esc_html__( 'Add widgets here.', 'iheartcode' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
 }
-add_action( 'widgets_init', 'back2basics_widgets_init' );
+add_action( 'widgets_init', 'iheartcode_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function back2basics_scripts() {
-	wp_enqueue_style( 'back2basics-style', get_stylesheet_uri() );
+function iheartcode_scripts() {
+	wp_enqueue_style( 'iheartcode-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'back2basics-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'iheartcode-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'back2basics-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'iheartcode-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'back2basics_scripts' );
+add_action( 'wp_enqueue_scripts', 'iheartcode_scripts' );
 
 /**
  * Enqueue Additional Fonts
  */
-function back2basics_fonts() {
+function iheartcode_fonts() {
 	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700|Inconsolata:400,700|Cousine:400,400i,700,700i|Karla:400,400i,700,700i', array(), '20170502');
 	wp_enqueue_style( 'ionicons', 'http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css', array(), '20170324');
 }
-add_action( 'wp_enqueue_scripts', 'back2basics_fonts' );
+add_action( 'wp_enqueue_scripts', 'iheartcode_fonts' );
 
 /** uncomment below for custom features */
 

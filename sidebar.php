@@ -1,7 +1,7 @@
 <?php
 /**
  * Sidebar template file
- * @package back2basics
+ * @package iheartcode
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {

@@ -1,7 +1,7 @@
 <?php
 /**
  * Footer template file
- * @package back2basics
+ * @package iheartcode
  */
 ?>
 <footer class="site-footer full-width-bar" role="contentinfo">

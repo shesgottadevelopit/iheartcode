@@ -1,7 +1,7 @@
 <?php
 /**
  * Archive template file
- * @package back2basics
+ * @package iheartcode
  */
 
 get_header(); ?>

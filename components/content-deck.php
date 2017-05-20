@@ -1,7 +1,7 @@
 <?php
 /**
  * Display posts
- * @package back2basics
+ * @package iheartcode
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -32,12 +32,12 @@
 	<div>
 		<?php the_content( sprintf(
 				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'back2basics' ), array( 'span' => array( 'class' => array() ) ) ),
+				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'iheartcode' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 			// for links within the page
 			wp_link_pages( array(
-				'before' => '<div>' . esc_html__( 'Pages:', 'back2basics' ),
+				'before' => '<div>' . esc_html__( 'Pages:', 'iheartcode' ),
 				'after'  => '</div>',
 			) );
 		?>

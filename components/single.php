@@ -1,7 +1,7 @@
 <?php
 /**
  * Single page template file
- * @package back2basics
+ * @package iheartcode
  */
 
 get_header(); ?>

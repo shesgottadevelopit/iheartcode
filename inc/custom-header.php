@@ -8,33 +8,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package back2basics
+ * @package iheartcode
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses back2basics_header_style()
+ * @uses iheartcode_header_style()
  */
-function back2basics_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'back2basics_custom_header_args', array(
+function iheartcode_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'iheartcode_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'back2basics_header_style',
+		'wp-head-callback'       => 'iheartcode_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'back2basics_custom_header_setup' );
+add_action( 'after_setup_theme', 'iheartcode_custom_header_setup' );
 
-if ( ! function_exists( 'back2basics_header_style' ) ) :
+if ( ! function_exists( 'iheartcode_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog.
  *
- * @see back2basics_custom_header_setup().
+ * @see iheartcode_custom_header_setup().
  */
-function back2basics_header_style() {
+function iheartcode_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	/*

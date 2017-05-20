@@ -1,7 +1,7 @@
 <?php
 /**
  * Display search posts
- * @package back2basics
+ * @package iheartcode
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

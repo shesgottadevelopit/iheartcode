@@ -2,7 +2,7 @@
 
 /**
  * Theme-specific functions, toggle comments to activate
- * @package back2basics
+ * @package iheartcode
  */
 
 /**
@@ -64,9 +64,9 @@ function myPagination2() {
 	if ( $links ) :
 		?>
 	<nav role="navigation">
-		<h4 class="screen-reader-text"><?php _e( 'Posts navigation', 'back2basics' ); ?></h4>
+		<h4 class="screen-reader-text"><?php _e( 'Posts navigation', 'iheartcode' ); ?></h4>
 		<?php
-		printf(__('<span class="nav-links-pre">Page %s of %s</span>', 'back2basics'), $current_page, $pages);
+		printf(__('<span class="nav-links-pre">Page %s of %s</span>', 'iheartcode'), $current_page, $pages);
 		echo $links; ?>
 	</nav>
 	<?php
@@ -78,7 +78,7 @@ function myPagination2() {
  * Page X of Y
  * Can be added to a partial 
  */
-function back2basics_pagination() {
+function iheartcode_pagination() {
 	global $wp_query;
 
 	$current_page = max(1, get_query_var('paged'));
@@ -91,10 +91,10 @@ function back2basics_pagination() {
 
 
 	echo '<nav class="navigation posts-navigation" role="navigation">';
-	echo '<h2 class="screen-reader-text">' . esc_html__('Posts navigation', 'back2basics') . '</h2>';
+	echo '<h2 class="screen-reader-text">' . esc_html__('Posts navigation', 'iheartcode') . '</h2>';
 	echo '<div class="nav-links"><div class="nav-flex">';
 	echo '<div class="nav-previous-index">' . $previous_posts . '</div>';
-	printf(__('<div class="nav-links-pre">Page %s of %s</div>', 'back2basics'), $current_page, $pages);
+	printf(__('<div class="nav-links-pre">Page %s of %s</div>', 'iheartcode'), $current_page, $pages);
 	echo '<div class="nav-next-index">' . $next_posts . '</div>';
 	echo '</div></div>';
 	echo '</nav>';
@@ -104,20 +104,20 @@ function back2basics_pagination() {
  * Custom Excerpts Indicator
  * Replaces default [...] with just ...
  */
-function back2basics_excerpt_more($more) {
+function iheartcode_excerpt_more($more) {
 	return " ...";
 }
 
-add_filter('excerpt_more', 'back2basics_excerpt_more');
+add_filter('excerpt_more', 'iheartcode_excerpt_more');
 
 /**
  * Adds support for excerpts on pages
  */
-function back2basics_add_excerpts_to_pages() {
+function iheartcode_add_excerpts_to_pages() {
 	add_post_type_support('page', 'excerpt');
 }
 
-add_action('init', 'back2basics_add_excerpts_to_pages');
+add_action('init', 'iheartcode_add_excerpts_to_pages');
 
 /**
  * Utility function to check if a gravatar exists for a given email or id
@@ -174,9 +174,9 @@ function validate_gravatar($id_or_email) {
  * Ignore sticky posts in main query on the home page
  *
  */
-add_action('pre_get_posts', 'back2basics_ignore_stickyposts');
+add_action('pre_get_posts', 'iheartcode_ignore_stickyposts');
 
-function back2basics_ignore_stickyposts($query) {
+function iheartcode_ignore_stickyposts($query) {
 	if (is_home() && $query->is_main_query()) {
 		$query->set('ignore_sticky_posts', true);
 	}
@@ -187,9 +187,9 @@ function back2basics_ignore_stickyposts($query) {
  * Fixes pagination due to offset on main query
  *
  */
-add_action('pre_get_posts', 'back2basics_query_offset', 1);
+add_action('pre_get_posts', 'iheartcode_query_offset', 1);
 
-function back2basics_query_offset($query) {
+function iheartcode_query_offset($query) {
 
 	//Offset the main query on the home page
 	if ($query->is_home() && $query->is_main_query() && !$query->is_paged()) {
