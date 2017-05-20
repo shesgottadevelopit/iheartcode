@@ -12,7 +12,7 @@ get_header(); ?>
 			get_template_part( 'content-excerpt');
 			endwhile;
 			// insert navigation or pagination
-			the_posts_navigation();
+			echo get_the_posts_pagination();
 		else :
 			get_template_part( 'content', 'none' );
 		endif; ?>

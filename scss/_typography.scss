@@ -11,7 +11,7 @@ input,
 select,
 textarea {
 	color: $offblack;
-	font-family: "Inconsolata", "Karla", Tahoma, sans-serif;
+	font-family: "Inconsolata", "Karla", Courier, monospace;
 	font-weight: 400;
 	line-height: 1.5;
 	font-size: 1rem;
@@ -29,8 +29,6 @@ h6 {
 }
 
 // baseline font sizes in pixels for HEADING elements
-// 48 - 40 - 31 - 25 - 20 - 16
-// 27 - 25 - 23 - 21 - 19 - 17
 
 h1 {@include fluid-type(1.68rem, 2.35rem ); }
 h2 {@include fluid-type(1.56rem, 1.85rem);}

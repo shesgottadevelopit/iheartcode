@@ -6,7 +6,7 @@
  */
 
 get_header(); ?>
-<main role="main">
+<main class="site-content" role="main">
 	<?php
 		// loop
 		while ( have_posts() ) : the_post();

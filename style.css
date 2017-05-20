@@ -448,7 +448,7 @@ input,
 select,
 textarea {
   color: #2e382e;
-  font-family: "Inconsolata", "Karla", Tahoma, sans-serif;
+  font-family: "Inconsolata", "Karla", Courier, monospace;
   font-weight: 400;
   line-height: 1.5;
   font-size: 1rem;
