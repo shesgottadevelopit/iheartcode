@@ -8,9 +8,9 @@
 // Strip function by: Miriam Suzanne / http://stackoverflow.com/a/12335841/1339786
 // Updated strip function implementation by: Hugo Giraudel / https://css-tricks.com/snippets/sass/strip-unit-function/
 
-//units for media queries
-$min-vw: 320px;
-$max-vw: 660px;
+//units for media queries in pixels & REM are stored in the "_variables.scss" file for easier adjustments
+$min-vw: $min-vw-px;
+$max-vw: $max-vw-px;
 
 @function strip-unit($number) {
 	@if type-of($number) == 'number' and not unitless($number) {
@@ -24,8 +24,8 @@ $max-vw: 660px;
 $font-size-min,
 $font-size-max,
 $properties: font-size,
-$vw-min: 20rem, //320px,
-$vw-max: 41.25rem //660px
+$vw-min: $min-vw-REM,
+$vw-max: $max-vw-REM
 ) {
 
 	@if(

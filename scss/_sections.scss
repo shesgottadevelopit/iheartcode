@@ -120,6 +120,10 @@
 	
 }
 
+.article-subtitle {
+	// add styles for subheading on general updates posts
+}
+
 .article-meta {
 	
 }
@@ -165,9 +169,12 @@
 	background-color: $cream;
 	z-index: 3;
 	position: relative;
-	//top: -1.75rem;
 	margin-top: -1.75rem; // need to disable @extend for this to work and not be overridden
 	padding: .25rem 1.25rem 0;
+	@include fluid-type(1rem, 1.085rem);
+	line-height: 1.6;
+	letter-spacing: -.03rem;
+	//letter-spacing: -.001875rem; //-0.03rem; //-0.03125rem;//-0.5px;
 }
 
 .article-content {
@@ -241,6 +248,10 @@
 
 
 // widgets
+
+.site-widgets {
+	@include fluid-type(1rem, 1.02rem);
+}
 .widget {
 	margin: 0 0 1.5em;
 }

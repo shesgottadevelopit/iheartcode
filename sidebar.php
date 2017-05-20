@@ -9,6 +9,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 }
 ?>
 
-<aside role="complementary">
+<aside class="site-widgets" role="complementary">
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </aside>
