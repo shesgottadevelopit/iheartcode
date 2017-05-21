@@ -127,16 +127,41 @@ a {
 	//border-bottom: 1px dotted $greyblue;
 	padding-top: 1.5rem;
 	padding-bottom: 1rem;
+	text-align: center;
+	
+	a {
+		text-decoration: none;
+	}
 	
 }
 
-.page-nums {
-	background-color: $mauve;
-	border-radius: 5px;
-	padding: 0.45rem;
-	font-size: .75rem;
+
+.page-nums, .prev-nav, .next-nav {
+	background-color: $lightbrown;
+	font-family: "Hind", Tahoma, sans-serif;
+	font-weight: 600;
+	border-radius: 6px;
+	padding: 0.5rem;
+	font-size: 1rem;
+	color: $cream;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	//border: 2px $candy solid;
+
 	
-	
+}
+
+.prev-nav, .next-nav {
+	text-transform: uppercase;
+	letter-spacing: .15rem;
+}
+
+.page-numbers .current .page-nums {
+	color: $candy;
+}
+
+.swap {
+	display: none;
 }
 
 .site-main .comment-navigation,
@@ -159,6 +184,12 @@ a {
 	float: right;
 	text-align: right;
 	width: 50%;
+}
+
+@media screen and (min-width: 550px){
+	.swap {
+		display: inline;
+	}
 }
 
 /*--------------------------------------------------------------

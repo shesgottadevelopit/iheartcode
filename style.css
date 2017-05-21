@@ -1066,13 +1066,35 @@ a:hover, a:active {
   border-top: 1px dotted #848c8e;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
+  text-align: center;
+}
+.posts-pagination a {
+  text-decoration: none;
 }
 
-.page-nums {
-  background-color: #b97375;
-  border-radius: 5px;
-  padding: 0.45rem;
-  font-size: .75rem;
+.page-nums, .prev-nav, .next-nav {
+  background-color: #5c5346;
+  font-family: "Hind", Tahoma, sans-serif;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: #fdeee9;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.prev-nav, .next-nav {
+  text-transform: uppercase;
+  letter-spacing: .15rem;
+}
+
+.page-numbers .current .page-nums {
+  color: #a61c3c;
+}
+
+.swap {
+  display: none;
 }
 
 .site-main .comment-navigation,
@@ -1097,6 +1119,11 @@ a:hover, a:active {
   width: 50%;
 }
 
+@media screen and (min-width: 550px) {
+  .swap {
+    display: inline;
+  }
+}
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/

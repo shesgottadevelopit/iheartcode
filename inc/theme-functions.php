@@ -28,12 +28,12 @@ function iheartcode_pagination() {
 		'total' => $wp_query->max_num_pages,
 		'show_all' => false,
 		'prev_next' => true,
-		'prev_text' => __('&laquo; Previous'),
-		'next_text' => __('Next &raquo;'),
+		'prev_text' => __('<span class="prev-nav">&laquo;<span class="swap">Newer Posts</span></span>'),
+		'next_text' => __('<span class="next-nav"><span class="swap">Older Posts</span> &raquo;</span>'),
 		'end_size' => 1,
 		'mid_size' => 2,
 		'type' => 'plain',
-		'before_page_number' => '<span class="love">',
+		'before_page_number' => '<span class="page-nums">',
 		'after_page_number' => '</span>'
 	));
 	
@@ -42,7 +42,7 @@ function iheartcode_pagination() {
 	<nav class="posts-pagination" role="navigation">
 		<h4 class="screen-reader-text"><?php _e( 'Posts navigation', 'iheartcode' ); ?></h4>
 		<?php
-		printf(__('<span class="pagination-page-count">Page %s of %s</span>', 'iheartcode'), $current_page, $pages);
+		//printf(__('<span class="pagination-page-count">Page %s of %s</span>', 'iheartcode'), $current_page, $pages);
 		echo $links; ?>
 	</nav>
 	<?php
