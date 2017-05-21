@@ -120,6 +120,16 @@ a {
 
 // pagination & post-navigation
 
+.posts-pagination {
+	margin-top: 1.5rem;
+	//margin-bottom: 1.5rem;
+	border-top: 1px dotted $greyblue;
+	//border-bottom: 1px dotted $greyblue;
+	padding-top: 1.5rem;
+	padding-bottom: 1rem;
+	
+}
+
 .page-nums {
 	background-color: $mauve;
 	border-radius: 5px;

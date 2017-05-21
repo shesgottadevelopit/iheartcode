@@ -32,14 +32,14 @@
 		}
 
 		&:hover,
-		&:focus,
-		&:active {
+			&:focus,
+			&:active {
 			color: $mauve;
 		}
 
 		&:hover,
-		&:focus,
-		&:active {
+			&:focus,
+			&:active {
 			outline: 0;
 		}
 	}
@@ -95,7 +95,7 @@
 	font-weight: 700;
 	color: $lightbrown;
 	font-size: 1.67rem;
-	
+
 	a {
 		font-weight: 600;
 		text-decoration: none;
@@ -106,18 +106,18 @@
 		}
 
 		&:hover,
-		&:focus,
-		&:active {
+			&:focus,
+			&:active {
 			color: $mauve;
 		}
 
 		&:hover,
-		&:focus,
-		&:active {
+			&:focus,
+			&:active {
 			outline: 0;
 		}
 	}
-	
+
 }
 
 .article-subtitle {
@@ -125,7 +125,7 @@
 }
 
 .article-meta {
-	
+
 }
 
 .article-tags {
@@ -136,29 +136,29 @@
 	font-size: .75rem;
 	padding-right: .4rem;
 	color: $mauve;
-	
+
 	&:visited {
-			color: $mauve;
-		}
+		color: $mauve;
+	}
 
-		&:hover,
+	&:hover,
 		&:focus,
 		&:active {
-			color: $greyblue;
-		}
+		color: $greyblue;
+	}
 
-		&:hover,
+	&:hover,
 		&:focus,
 		&:active {
-			outline: 0;
-		}
+		outline: 0;
+	}
 }
 
 .article-tag, .article-tags a {
 	font-size: .75rem;
 	padding-right: .4rem;
 	color: $greyblue;
-	
+
 }
 .article-date {
 	color: $candy;
@@ -186,7 +186,7 @@
 	//font-size: .75rem;
 	color: $cream;
 	padding-bottom: 1rem;
-	
+
 	a {
 		text-decoration: none;
 		color: $white;
@@ -197,19 +197,19 @@
 		}
 
 		&:hover,
-		&:focus,
-		&:active {
+			&:focus,
+			&:active {
 			color: $mauve;
 		}
 
 		&:hover,
-		&:focus,
-		&:active {
+			&:focus,
+			&:active {
 			outline: 0;
 		}
 	}
-	
-	
+
+
 }
 
 // footer
@@ -227,14 +227,14 @@
 		}
 
 		&:hover,
-		&:focus,
-		&:active {
+			&:focus,
+			&:active {
 			color: $mauve;
 		}
 
 		&:hover,
-		&:focus,
-		&:active {
+			&:focus,
+			&:active {
 			outline: 0;
 		}
 	}
@@ -251,17 +251,28 @@
 
 .site-widgets {
 	@include fluid-type(1rem, 1.02rem);
-	
+	background-color: $cream;
+	padding-top: 2rem;
+	margin-top: 1.5rem;
+	border-top: 1px dotted $greyblue;
+
+
 	ul {
 		list-style: none;
 		border-left: 3px $mauve solid;
 		padding-left: 1rem;
 		margin-left: 1rem;
 	}
-	
+
 	a {
 		text-decoration: none;
 	}
+}
+
+.site-widgets:after {
+	content: "";
+	display: table;
+	clear: both;
 }
 .widget {
 	margin: 0 0 1.5em;

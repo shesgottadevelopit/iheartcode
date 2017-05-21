@@ -7,34 +7,10 @@
 
 /**
  * Custom pagination for akudo.codes
+ * Page X of Y
  */
-function myPagination() {
-	global $wp_query;
-	
-	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
-		return;
-	}
 
-	$big = 999999999; // need an unlikely integer
-
-	echo paginate_links(array(
-		'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
-		'format' => '?paged=%#%',
-		'current' => max(1, get_query_var('paged')),
-		'total' => $wp_query->max_num_pages,
-		'show_all' => false,
-		'prev_next' => true,
-		'prev_text' => __('&laquo; Previous'),
-		'next_text' => __('Next &raquo;'),
-		'end_size' => 1,
-		'mid_size' => 2,
-		'type' => 'plain',
-		'before_page_number' => '<span class="love">',
-		'after_page_number' => '</span>'
-	));
-}
-
-function myPagination2() {
+function iheartcode_pagination() {
 	global $wp_query;
 	
 	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
@@ -63,42 +39,16 @@ function myPagination2() {
 	
 	if ( $links ) :
 		?>
-	<nav role="navigation">
+	<nav class="posts-pagination" role="navigation">
 		<h4 class="screen-reader-text"><?php _e( 'Posts navigation', 'iheartcode' ); ?></h4>
 		<?php
-		printf(__('<span class="nav-links-pre">Page %s of %s</span>', 'iheartcode'), $current_page, $pages);
+		printf(__('<span class="pagination-page-count">Page %s of %s</span>', 'iheartcode'), $current_page, $pages);
 		echo $links; ?>
 	</nav>
 	<?php
 	endif;
 }
 
-/**
- * Custom pagination function outputs number of pages within navigation loop
- * Page X of Y
- * Can be added to a partial 
- */
-function iheartcode_pagination() {
-	global $wp_query;
-
-	$current_page = max(1, get_query_var('paged'));
-	$pages = $wp_query->max_num_pages;
-	$big = 999999999; // need an unlikely integer
-
-
-	$previous_posts = get_previous_posts_link('<span class="icon ic-chevron-left post-nav"></span>');
-	$next_posts = get_next_posts_link('<span class="icon ic-chevron-right post-nav"></span>');
-
-
-	echo '<nav class="navigation posts-navigation" role="navigation">';
-	echo '<h2 class="screen-reader-text">' . esc_html__('Posts navigation', 'iheartcode') . '</h2>';
-	echo '<div class="nav-links"><div class="nav-flex">';
-	echo '<div class="nav-previous-index">' . $previous_posts . '</div>';
-	printf(__('<div class="nav-links-pre">Page %s of %s</div>', 'iheartcode'), $current_page, $pages);
-	echo '<div class="nav-next-index">' . $next_posts . '</div>';
-	echo '</div></div>';
-	echo '</nav>';
-}
 
 /**
  * Custom Excerpts Indicator

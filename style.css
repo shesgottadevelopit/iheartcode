@@ -261,6 +261,22 @@ html, body {
   margin-top: 3rem;
 }
 
+.grid-article-item {
+  padding-left: 20px;
+  padding-right: 20px;
+  clear: both;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .grid-article-item {
+    width: 50%;
+    margin-bottom: 2em;
+    overflow: hidden;
+    clear: none;
+    float: left;
+  }
+}
 /*--------------------------------------------------------------
 # general element formatting
 --------------------------------------------------------------*/
@@ -814,6 +830,10 @@ big {
 
 .site-widgets {
   font-size: 1rem;
+  background-color: #fdeee9;
+  padding-top: 2rem;
+  margin-top: 1.5rem;
+  border-top: 1px dotted #848c8e;
 }
 @media screen and (min-width: 320px) {
   .site-widgets {
@@ -833,6 +853,12 @@ big {
 }
 .site-widgets a {
   text-decoration: none;
+}
+
+.site-widgets:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .widget {
@@ -1035,6 +1061,13 @@ a:hover, a:active {
     display: block;
   }
 }
+.posts-pagination {
+  margin-top: 1.5rem;
+  border-top: 1px dotted #848c8e;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
 .page-nums {
   background-color: #b97375;
   border-radius: 5px;

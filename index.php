@@ -12,8 +12,8 @@ get_header(); ?>
 			get_template_part( 'content-excerpt');
 			endwhile;
 			// insert navigation or pagination
-			myPagination2();
-			echo get_the_posts_pagination();
+			iheartcode_pagination();
+			//echo get_the_posts_pagination();
 		else :
 			get_template_part( 'content', 'none' );
 		endif; ?>
