@@ -291,6 +291,18 @@
 }
 
 // comments
+
+.post-comments {
+	margin-top: 1.5rem;
+	border-top: 1px dotted $greyblue;
+	padding-top: 1.5rem;
+}
+
+.comment-list {
+	padding-bottom: 1.85rem;
+	border-bottom: 1px dotted $greyblue;
+}
+
 .comment-content a {
 	word-wrap: break-word;
 }

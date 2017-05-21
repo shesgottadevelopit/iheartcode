@@ -8,7 +8,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div>
+<div class="post-comments">
 	<?php
 	// edit below this line only
 	if ( have_comments() ) : ?>

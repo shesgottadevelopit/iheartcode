@@ -876,6 +876,17 @@ big {
   max-width: 100%;
 }
 
+.post-comments {
+  margin-top: 1.5rem;
+  border-top: 1px dotted #848c8e;
+  padding-top: 1.5rem;
+}
+
+.comment-list {
+  padding-bottom: 1.85rem;
+  border-bottom: 1px dotted #848c8e;
+}
+
 .comment-content a {
   word-wrap: break-word;
 }
@@ -1077,8 +1088,7 @@ a:hover, a:active {
 }
 
 .post-navigation {
-  padding-bottom: 2rem;
-  margin-bottom: 4rem;
+  padding-bottom: 1.25rem;
 }
 .post-navigation a {
   text-decoration: none;
