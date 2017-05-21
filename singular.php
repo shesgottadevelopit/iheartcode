@@ -14,7 +14,10 @@ get_header(); ?>
 
 			if ( get_post_type() === 'post' ) {
 			// insert navigation
-			the_post_navigation();
+			the_post_navigation(array(
+            'prev_text'                  => __( '<div class="post-nav-link">Previous:</div><span class="post-nav-title"> %title</span>' ),
+            'next_text'                  => __( '<div class="post-nav-link">Next:</div><span class="post-nav-title"> %title</span>' ),
+				));
 			}
 			//comments - if applicable
 			if ( comments_open() || get_comments_number() ) :

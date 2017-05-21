@@ -120,17 +120,53 @@ a {
 
 // pagination & post-navigation
 
-.posts-pagination {
+.posts-pagination,
+.post-navigation {
 	margin-top: 1.5rem;
-	//margin-bottom: 1.5rem;
 	border-top: 1px dotted $greyblue;
-	//border-bottom: 1px dotted $greyblue;
 	padding-top: 1.5rem;
+}
+
+.posts-pagination {
 	padding-bottom: 1rem;
 	text-align: center;
 	
 	a {
 		text-decoration: none;
+	}
+	
+}
+
+.post-navigation {
+	padding-bottom: 2rem;
+	margin-bottom: 4rem;
+	
+	a {
+		text-decoration: none;
+		
+		&:hover {
+			color: $candy;
+		}
+	}
+	
+	.post-nav-link {
+		//font-variant: small-caps;
+		text-transform: uppercase;
+		font-family: "Hind", Tahoma, sans-serif;
+		font-weight: 600;
+		font-size: .75rem;
+		text-decoration: underline;
+		color: $candy;
+	
+	}
+	.post-nav-title {
+		font-weight: 400;
+		font-size: .9rem;
+		color: $lightbrown;
+		
+		&:hover {
+			color: $lightbrown;
+		}
 	}
 	
 }
@@ -164,9 +200,10 @@ a {
 	display: none;
 }
 
-.site-main .comment-navigation,
-.site-main .posts-navigation,
-.site-main .post-navigation {
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
 	margin: 0 0 1.5em;
 	overflow: hidden;
 }

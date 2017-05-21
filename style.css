@@ -1061,15 +1061,46 @@ a:hover, a:active {
     display: block;
   }
 }
-.posts-pagination {
+.posts-pagination,
+.post-navigation {
   margin-top: 1.5rem;
   border-top: 1px dotted #848c8e;
   padding-top: 1.5rem;
+}
+
+.posts-pagination {
   padding-bottom: 1rem;
   text-align: center;
 }
 .posts-pagination a {
   text-decoration: none;
+}
+
+.post-navigation {
+  padding-bottom: 2rem;
+  margin-bottom: 4rem;
+}
+.post-navigation a {
+  text-decoration: none;
+}
+.post-navigation a:hover {
+  color: #a61c3c;
+}
+.post-navigation .post-nav-link {
+  text-transform: uppercase;
+  font-family: "Hind", Tahoma, sans-serif;
+  font-weight: 600;
+  font-size: .75rem;
+  text-decoration: underline;
+  color: #a61c3c;
+}
+.post-navigation .post-nav-title {
+  font-weight: 400;
+  font-size: .9rem;
+  color: #5c5346;
+}
+.post-navigation .post-nav-title:hover {
+  color: #5c5346;
 }
 
 .page-nums, .prev-nav, .next-nav {
@@ -1097,9 +1128,9 @@ a:hover, a:active {
   display: none;
 }
 
-.site-main .comment-navigation,
-.site-main .posts-navigation,
-.site-main .post-navigation {
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
   margin: 0 0 1.5em;
   overflow: hidden;
 }
