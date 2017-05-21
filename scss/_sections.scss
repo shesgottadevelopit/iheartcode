@@ -79,14 +79,16 @@
 	text-align: center;
 }
 
-.single .article-header {
+.single .article-header, 
+.page .article-header {
 	background-color: $offblack;
 	padding-top: 1.25rem;
 	padding-bottom: 4rem;
 	@extend .article-header;
 }
 
-.single .article-title {
+.single .article-title,
+.page .article-title {
 	@include fluid-type(1.67rem, 2.1rem );
 	text-align: center;
 	color: $white;
@@ -165,7 +167,8 @@
 	font-weight: 700;
 }
 
-.single .article-content {
+.single .article-content,
+.page .article-content {
 	background-color: $cream;
 	z-index: 3;
 	position: relative;

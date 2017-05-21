@@ -7,6 +7,8 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="article-header full-width-bar">
 		
+		<?php if ( 'post' === get_post_type() ) : ?>
+		
 		<div class="article-meta">
 			<div class="single-meta">
 				<span class="article-categories"><?php the_category(' & '); ?></span> 
@@ -18,8 +20,8 @@
 				<?php the_post_thumbnail(); ?>
 			</a>
 		</div>
-		<?php
-		if ( is_single() ) :
+		<?php endif;
+		if ( is_single() || is_page() ) :
 			the_title( '<h2 class="article-title">', '</h2>' );
 		else :
 			the_title( '<h2 class="article-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );

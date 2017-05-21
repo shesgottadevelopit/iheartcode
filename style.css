@@ -673,28 +673,33 @@ big {
   margin: 0 0 1.5em;
 }
 
-.article-header, .single .article-header {
+.article-header, .single .article-header,
+.page .article-header {
   text-align: center;
 }
 
-.single .article-header {
+.single .article-header,
+.page .article-header {
   background-color: #2e382e;
   padding-top: 1.25rem;
   padding-bottom: 4rem;
 }
 
-.single .article-title {
+.single .article-title,
+.page .article-title {
   font-size: 1.67rem;
   text-align: center;
   color: #ffffff;
 }
 @media screen and (min-width: 320px) {
-  .single .article-title {
+  .single .article-title,
+  .page .article-title {
     font-size: calc(1.67rem + 0.43 * (100vw - 20rem) / 23.4375);
   }
 }
 @media screen and (min-width: 695px) {
-  .single .article-title {
+  .single .article-title,
+  .page .article-title {
     font-size: 2.1rem;
   }
 }
@@ -749,7 +754,8 @@ big {
   font-weight: 700;
 }
 
-.single .article-content {
+.single .article-content,
+.page .article-content {
   background-color: #fdeee9;
   z-index: 3;
   position: relative;
@@ -760,12 +766,14 @@ big {
   letter-spacing: -.03rem;
 }
 @media screen and (min-width: 320px) {
-  .single .article-content {
+  .single .article-content,
+  .page .article-content {
     font-size: calc(1rem + 0.085 * (100vw - 20rem) / 23.4375);
   }
 }
 @media screen and (min-width: 695px) {
-  .single .article-content {
+  .single .article-content,
+  .page .article-content {
     font-size: 1.085rem;
   }
 }
