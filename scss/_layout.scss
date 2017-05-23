@@ -14,6 +14,10 @@ html, body {
 
 }
 
+.all-content { // container for variable content within site page with padding to ensure bottom content doesn't disappear inside of fixed/sticky footer due to hack
+	padding-bottom: 3.5rem;
+}
+
 .full-width-bar {
 	//position: relative;
 	left: 50%;
@@ -29,6 +33,16 @@ html, body {
 
 .site-content {
 	margin-top: 3rem;
+}
+
+.untitled {
+	
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+		padding-bottom: 5rem;
+	}
 }
 
 // grid for widgets

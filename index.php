@@ -5,6 +5,7 @@
  */
 
 get_header(); ?>
+<div class="all-content">
 <main class="site-content" role="main">
 	<?php
 		// init loop
@@ -18,6 +19,7 @@ get_header(); ?>
 			get_template_part( 'content', 'none' );
 		endif; ?>
 </main>
+<?php get_sidebar(); ?>
+</div>
 <?php
-get_sidebar();
 get_footer();

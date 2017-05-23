@@ -248,6 +248,10 @@ html, body {
   position: relative;
 }
 
+.all-content {
+  padding-bottom: 3.5rem;
+}
+
 .full-width-bar {
   left: 50%;
   margin-left: -50vw;
@@ -261,6 +265,13 @@ html, body {
 
 .site-content {
   margin-top: 3rem;
+}
+
+.untitled:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding-bottom: 5rem;
 }
 
 .grid-article-item {
@@ -903,25 +914,6 @@ big {
 /* Make sure select elements fit in widgets. */
 .widget select {
   max-width: 100%;
-}
-
-.post-comments {
-  margin-top: 1.5rem;
-  border-top: 1px dotted #848c8e;
-  padding-top: 1.5rem;
-}
-
-.comment-list {
-  padding-bottom: 1.85rem;
-  border-bottom: 1px dotted #848c8e;
-}
-
-.comment-content a {
-  word-wrap: break-word;
-}
-
-.bypostauthor {
-  display: block;
 }
 
 /*--------------------------------------------------------------

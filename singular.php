@@ -6,6 +6,7 @@
  */
 
 get_header(); ?>
+<div class="all-content">
 <main class="site-content" role="main">
 	<?php
 		// loop
@@ -25,6 +26,7 @@ get_header(); ?>
 			endif;
 		endwhile;  //end loop ?>
 </main>
+<?php get_sidebar(); ?>
+</div>
 <?php
-get_sidebar();
 get_footer();
