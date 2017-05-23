@@ -244,6 +244,8 @@ html, body {
   margin-left: auto;
   margin-right: auto;
   padding: 0 1rem 0;
+  min-height: 100vh;
+  position: relative;
 }
 
 .full-width-bar {
@@ -833,6 +835,8 @@ big {
   background-color: #5c5346;
   font-size: .9rem;
   color: #ffffff;
+  position: absolute;
+  bottom: 0;
 }
 .site-footer a {
   text-decoration: none;
