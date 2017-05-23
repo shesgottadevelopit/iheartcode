@@ -674,20 +674,19 @@ big {
 }
 
 .article-header, .single .article-header,
-.page .article-header,
-.page-header {
+.page .article-header {
   text-align: center;
 }
 
 .page-header {
+  background-color: #2e382e;
+  padding-top: 1.25rem;
+  padding-bottom: 2rem;
   margin-bottom: 2rem;
 }
 
 .single .article-header,
-.single .page-header,
-.page .article-header,
-.page .page-header,
-.page-header {
+.page .article-header {
   background-color: #2e382e;
   padding-top: 1.25rem;
   padding-bottom: 4rem;
@@ -821,6 +820,13 @@ big {
 }
 .single-meta a:hover, .single-meta a:focus, .single-meta a:active {
   outline: 0;
+}
+
+.archive-description {
+  font-size: 1rem;
+}
+.archive-description p {
+  margin: 0;
 }
 
 .site-footer {

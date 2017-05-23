@@ -80,13 +80,15 @@
 }
 
 .page-header {
+	background-color: $offblack;
+	padding-top: 1.25rem;
+	padding-bottom: 2rem;
 	margin-bottom: 2rem;
 	//text-align: left;
 }
 
 .single .article-header, 
-.page .article-header,
-.page-header {
+.page .article-header {
 	background-color: $offblack;
 	padding-top: 1.25rem;
 	padding-bottom: 4rem;
@@ -184,7 +186,6 @@
 	@include fluid-type(1rem, 1.085rem);
 	line-height: 1.6;
 	letter-spacing: -.03rem;
-	//letter-spacing: -.001875rem; //-0.03rem; //-0.03125rem;//-0.5px;
 }
 
 .article-content {
@@ -221,6 +222,22 @@
 
 
 }
+
+// archives
+.archive-title {
+	
+}
+
+.archive-description {
+	font-size: 1rem;
+	
+	& p {
+		margin: 0;
+	}
+	
+}
+
+
 
 // footer
 .site-footer {

@@ -12,8 +12,8 @@ get_header(); ?>
 
 			<header class="page-header full-width-bar">
 				<?php
-					the_archive_title( '<h2>', '</h2>' );
-					the_archive_description( '<div>', '</div>' );
+					the_archive_title( '<h2 class="archive-title">', '</h2>' );
+					the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header>
 			<?php while ( have_posts() ) : the_post();
