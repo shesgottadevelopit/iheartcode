@@ -10,9 +10,9 @@ get_header(); ?>
 		// init loop
 		if ( have_posts() ) : ?>
 
-			<header class="page-header">
+			<header class="page-header full-width-bar">
 				<?php
-					the_archive_title( '<h1>', '</h1>' );
+					the_archive_title( '<h2>', '</h2>' );
 					the_archive_description( '<div>', '</div>' );
 				?>
 			</header>

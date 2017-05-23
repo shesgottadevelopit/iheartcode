@@ -79,8 +79,14 @@
 	text-align: center;
 }
 
+.page-header {
+	margin-bottom: 2rem;
+	//text-align: left;
+}
+
 .single .article-header, 
-.page .article-header {
+.page .article-header,
+.page-header {
 	background-color: $offblack;
 	padding-top: 1.25rem;
 	padding-bottom: 4rem;
@@ -88,7 +94,8 @@
 }
 
 .single .article-title,
-.page .article-title {
+.page .article-title,
+.page-header {
 	@include fluid-type(1.67rem, 2.1rem );
 	text-align: center;
 	color: $white;

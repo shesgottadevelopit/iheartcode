@@ -22,11 +22,16 @@
 		</div>
 		<?php endif;
 		if ( is_single() || is_page() ) :
-			the_title( '<h2 class="article-title">', '</h2>' );
+			the_title( '<h2 class="article-title">', '</h2>' ); 
 		else :
 			the_title( '<h2 class="article-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
+		if(function_exists('get_field')) {//conditional statement testing the activation of the ACF plugin or nah
+			if (get_field('article_subtitle')) {
+					echo '<h3 style="color:white; font-weight: 400;">' . get_field('article_subtitle') . '</h3>';
 
+				}
+		}
 		if ( 'post' === get_post_type() ) : ?>
 			<div class="article-tags">
 				<?php echo get_the_tag_list('<span class="article-tag">','</span><span class="article-tag">','</span>'); ?>
