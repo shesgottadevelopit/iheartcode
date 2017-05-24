@@ -28,7 +28,7 @@
 		endif;
 		if(function_exists('get_field')) {//conditional statement testing the activation of the ACF plugin or nah
 			if (get_field('article_subtitle')) {
-					echo '<h3 style="color:white; font-weight: 400;">' . get_field('article_subtitle') . '</h3>';
+					echo '<h3 class="article-subtitle">' . get_field('article_subtitle') . '</h3>';
 
 				}
 		}

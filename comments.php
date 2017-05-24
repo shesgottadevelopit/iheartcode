@@ -23,8 +23,8 @@ if ( post_password_required() ) {
 	</h2>
 	<ol class="comment-list">
 		<?php wp_list_comments( array(
+				'type'		=>'comment',
 				'style'      => 'ol',
-				'short_ping' => true,
 				'avatar_size' => 48
 			) );
 		?>

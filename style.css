@@ -747,6 +747,12 @@ big {
   outline: 0;
 }
 
+.article-subtitle {
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #fdeee9;
+}
+
 .article-tags {
   padding-top: .75rem;
 }

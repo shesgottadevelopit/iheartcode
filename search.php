@@ -5,7 +5,8 @@
  */
 
 get_header(); ?>
-<main role="main">
+<div class="all-content">
+<main class="site-content" role="main">
 	<?php
 		// init loop
 		if ( have_posts() ) : ?>
@@ -22,6 +23,7 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
 		endif; ?>
 </main>
+<?php get_sidebar(); ?>
+</div>
 <?php
-get_sidebar();
 get_footer();
