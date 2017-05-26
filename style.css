@@ -330,10 +330,11 @@ hr {
 ul,
 ol {
   margin: 0 0 1.5em 0;
+  padding-left: 1.75rem;
 }
 
 ul {
-  list-style: disc;
+  list-style: square;
 }
 
 ol {
@@ -343,11 +344,12 @@ ol {
 li > ul,
 li > ol {
   margin-bottom: 0;
-  margin-left: 1.5em;
+  margin-left: 1em;
 }
 
 dt {
   font-weight: bold;
+  text-decoration: underline;
 }
 
 dd {
@@ -371,6 +373,16 @@ table {
   width: 100%;
 }
 
+th {
+  background-color: #b97375;
+  color: #fdeee9;
+}
+
+td, th {
+  border: 1px solid #272838;
+  padding: .25rem;
+}
+
 .alignleft {
   display: inline;
   float: left;
@@ -388,32 +400,6 @@ table {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-.clear:before,
-.clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
-  content: "";
-  display: table;
-  table-layout: fixed;
-}
-
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after {
-  clear: both;
 }
 
 /* Text meant only for screen readers. */
@@ -589,8 +575,12 @@ i {
   font-style: italic;
 }
 
-blockquote {
-  margin: 0 1.5em;
+blockquote,
+q {
+  border-left: 4px solid #b97375;
+  padding-left: .75rem;
+  margin-left: 1rem;
+  margin-right: .5rem;
 }
 
 address {
@@ -598,14 +588,21 @@ address {
 }
 
 pre {
-  background: #eee;
+  background-color: #5c5346;
+  border-left: 4px solid #a61c3c;
+  color: #ffffff;
   font-family: "Cousine", "Courier 10 Pitch", Courier, monospace;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   line-height: 1.6;
   margin-bottom: 1.6em;
   max-width: 100%;
   overflow: auto;
   padding: 1.6em;
+  tab-size: 4;
+}
+pre code {
+  background-color: inherit;
+  font-size: inherit;
 }
 
 code,
@@ -614,6 +611,8 @@ tt,
 var {
   font-family: "Cousine", Consolas, monospace;
   font-size: 0.85rem;
+  background-color: #e8d2ae;
+  padding: .25rem .4rem;
 }
 
 abbr,
@@ -624,7 +623,8 @@ acronym {
 
 mark,
 ins {
-  background: #fff9c0;
+  background-color: #e8d2ae;
+  padding: 0 .25rem;
   text-decoration: none;
 }
 

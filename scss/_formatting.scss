@@ -35,10 +35,11 @@ hr {
 ul,
 ol {
 	margin: 0 0 1.5em 0;
+	padding-left: 1.75rem;
 }
 
 ul {
-	list-style: disc;
+	list-style: square;
 }
 
 ol {
@@ -48,14 +49,15 @@ ol {
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: 1.5em;
+	margin-left: 1em;
 }
 
-dt {
+dt { // definition term
 	font-weight: bold;
+	text-decoration: underline;
 }
 
-dd {
+dd { // definition description
 	margin: 0 1.5em 1.5em;
 }
 
@@ -71,6 +73,16 @@ figure {
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
+}
+
+th {
+	background-color: $mauve;
+	color: $cream;
+}
+
+td,th {
+	border: 1px solid $darkblue;
+	padding: .25rem;
 }
 
 // alignments 
@@ -92,34 +104,6 @@ table {
 	margin-left: auto;
 	margin-right: auto;
 }
-
-// clearings 
-.clear:before,
-.clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
-	content: "";
-	display: table;
-	table-layout: fixed;
-}
-
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after {
-	clear: both;
-}
-
 
 // accessibility
 /* Text meant only for screen readers. */

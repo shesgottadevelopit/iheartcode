@@ -50,8 +50,12 @@ i {
 	font-style: italic;
 }
 
-blockquote {
-	margin: 0 1.5em;
+blockquote,
+q {
+	border-left: 4px solid $mauve;
+	padding-left: .75rem;
+	margin-left: 1rem;
+	margin-right: .5rem;
 }
 
 address {
@@ -59,14 +63,23 @@ address {
 }
 
 pre {
-	background: #eee;
+	background-color: $lightbrown;
+	border-left: 4px solid $candy;
+	color: $white;
 	font-family: "Cousine", "Courier 10 Pitch", Courier, monospace;
-	font-size: 0.85rem;
+	font-size: 0.9rem;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
 	max-width: 100%;
 	overflow: auto;
 	padding: 1.6em;
+	tab-size: 4;
+	//white-space: pre-wrap;
+	
+	code {
+		background-color: inherit;
+		font-size: inherit;
+	}
 }
 
 code,
@@ -75,6 +88,8 @@ tt,
 var {
 	font-family: "Cousine", Consolas, monospace;
 	font-size: 0.85rem;
+	background-color: $taupe;
+	padding: .25rem .4rem;
 }
 
 abbr,
@@ -85,7 +100,8 @@ acronym {
 
 mark,
 ins {
-	background: #fff9c0;
+	background-color: $taupe;
+	padding: 0 .25rem;
 	text-decoration: none;
 }
 
