@@ -163,10 +163,14 @@
 	}
 }
 
-.article-tag, .article-tags a {
+.article-tags a {
 	font-size: .75rem;
 	padding-right: .4rem;
 	color: $greyblue;
+	
+	&:visited {
+			color: $greyblue;
+		}
 
 }
 .article-date {

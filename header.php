@@ -26,6 +26,6 @@
 				</div>
 				<nav class="top-nav" role="navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Menu', 'iheartcode'); ?></button>
-<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'nav-menu')); ?>
+<?php wp_nav_menu(array('theme_location' => 'menu-1', 'menu_id' => 'primary-menu', 'menu_class' => 'nav-menu')); ?>
 				</nav><!-- end navigation -->
 			</header>

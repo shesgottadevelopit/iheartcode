@@ -32,17 +32,7 @@ html, body {
 }
 
 .site-content {
-	margin-top: 3rem;
-}
-
-.untitled {
-	
-	&:after {
-		content: "";
-		display: table;
-		clear: both;
-		padding-bottom: 5rem;
-	}
+	margin-top: 2rem;
 }
 
 // grid for widgets
