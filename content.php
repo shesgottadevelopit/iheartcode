@@ -40,7 +40,8 @@
 			<?php if (is_user_logged_in() ) {
 						echo edit_post_link('Edit this post', '<span class="edit-post">', '</span>');
 			} ?>
-			 
+			
+			<?php if ( function_exists( 'heart_this_hearts' ) ) { heart_this_hearts(); } ?> 
 		</div>
 		
 
