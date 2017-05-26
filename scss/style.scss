@@ -3,7 +3,7 @@ Theme Name: iheartcode wordpress theme
 Theme URI: http://akudo.codes
 Author: akudo chigozie
 Author URI: http://akudo.codes
-Description: a basic plain text theme focused on content
+Description: a basic plain text theme focused on the content of coding
 Version: 0.5
 Tags:
 */
@@ -45,6 +45,7 @@ CSS structure
 /*--------------------------------------------------------------
 # forms
 --------------------------------------------------------------*/
+@import "comments";
 @import "forms";
 /*--------------------------------------------------------------
 # navigation (links/menus)

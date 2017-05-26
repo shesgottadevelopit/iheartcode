@@ -3,7 +3,7 @@ Theme Name: iheartcode wordpress theme
 Theme URI: http://akudo.codes
 Author: akudo chigozie
 Author URI: http://akudo.codes
-Description: a basic plain text theme focused on content
+Description: a basic plain text theme focused on the content of coding
 Version: 0.5
 Tags:
 */
@@ -925,6 +925,136 @@ big {
 /*--------------------------------------------------------------
 # forms
 --------------------------------------------------------------*/
+.post-comments {
+  margin-top: 1.5rem;
+  border-top: 1px dotted #848c8e;
+  padding-top: 1.5rem;
+}
+
+.comment-list ol {
+  list-style: none;
+}
+
+ol.comment-list {
+  list-style: none;
+  padding-left: 0;
+  padding-bottom: 1.85rem;
+  margin-top: 1rem;
+  font-size: .95rem;
+}
+ol.comment-list:after {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  content: "";
+  border-bottom: 1px dotted #848c8e;
+}
+ol.comment-list li.comment {
+  margin-bottom: 1.5rem;
+}
+ol.comment-list .comment-body {
+  padding: .5rem .5rem 1.5rem .5rem;
+}
+ol.comment-list .comment-body:after {
+  display: table;
+  clear: both;
+  content: '';
+}
+ol.comment-list .comment-meta {
+  position: relative;
+}
+ol.comment-list .fn {
+  position: absolute;
+  top: -.2rem;
+  padding-left: 1rem;
+}
+ol.comment-list .says {
+  display: none;
+}
+ol.comment-list .comment-metadata {
+  margin-left: 3rem;
+  margin-top: -1.5em;
+}
+ol.comment-list .comment-content a {
+  word-wrap: break-word;
+}
+ol.comment-list .comment-content p {
+  margin-bottom: .5rem;
+}
+ol.comment-list img.avatar {
+  border-radius: 10px;
+}
+ol.comment-list .reply {
+  background-color: #5c5346;
+  border-radius: 4px;
+  font-size: .9rem;
+  color: #fdeee9;
+  width: 4rem;
+  text-align: center;
+  margin-top: .5rem;
+  float: right;
+}
+ol.comment-list .reply a {
+  color: #fdeee9;
+  text-decoration: none;
+}
+ol.comment-list .bypostauthor {
+  display: block;
+  background-color: #b97375;
+  border-radius: 4px;
+  color: #fdeee9;
+  border: 1px dotted #5c5346;
+}
+ol.comment-list .bypostauthor a {
+  color: #272838;
+}
+ol.comment-list .bypostauthor .reply {
+  background-color: #fdeee9;
+  border-radius: 4px;
+  font-size: .9rem;
+  color: #b97375;
+  width: 4rem;
+  text-align: center;
+  margin-top: .5rem;
+  float: right;
+}
+ol.comment-list .bypostauthor .reply a {
+  color: #b97375;
+  text-decoration: none;
+}
+ol.comment-list .children {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.comment-form button,
+.comment-form input[type="button"],
+.comment-form input[type="reset"],
+.comment-form input[type="submit"] {
+  background-color: #5c5346;
+  border-radius: 4px;
+  font-size: .9rem;
+  color: #fdeee9;
+  text-align: center;
+  margin-top: .5rem;
+  outline: 0;
+  border: none;
+  /*	border: 1px solid;
+  	border-color: #ccc #ccc #bbb;
+  	border-radius: 3px;
+  	background: #e6e6e6;
+  	color: rgba(0, 0, 0, .8);
+  	font-size: 12px;
+  	font-size: 0.75rem;
+  	line-height: 1;
+  	padding: .6em 1em .4em;*/
+}
+
+@media screen and (min-width: 660px) {
+  ol.comment-list .children {
+    margin-left: 1.5em;
+  }
+}
 button,
 input[type="button"],
 input[type="reset"],
@@ -1026,10 +1156,6 @@ a:focus {
 }
 a:hover, a:active {
   outline: 0;
-}
-
-.top-nav {
-  display: none;
 }
 
 .main-navigation {

@@ -25,7 +25,7 @@ if ( post_password_required() ) {
 		<?php wp_list_comments( array(
 				'type'		=>'comment',
 				'style'      => 'ol',
-				'avatar_size' => 48
+				'avatar_size' => 32
 			) );
 		?>
 	</ol>

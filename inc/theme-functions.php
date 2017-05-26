@@ -120,55 +120,6 @@ function validate_gravatar($id_or_email) {
 	}
 }
 
-/**
- * Ignore sticky posts in main query on the home page
- *
- */
-add_action('pre_get_posts', 'iheartcode_ignore_stickyposts');
-
-function iheartcode_ignore_stickyposts($query) {
-	if (is_home() && $query->is_main_query()) {
-		$query->set('ignore_sticky_posts', true);
-	}
-}
-
-/**
- * Offset on main query
- * Fixes pagination due to offset on main query
- *
- */
-add_action('pre_get_posts', 'iheartcode_query_offset', 1);
-
-function iheartcode_query_offset($query) {
-
-	//Offset the main query on the home page
-	if ($query->is_home() && $query->is_main_query() && !$query->is_paged()) {
-		$query->set('offset', '1');
-	}
-
-	//Everything below fixes pagination due to offset on main query
-	//Before anything else, make sure this is the right query...
-	if (!$query->is_home() && $query->is_main_query()) {
-		return;
-	}
-
-	//First, define your desired offset...
-	$offset = 1;
-
-	//Next, determine how many posts per page you want (we'll use WordPress's settings)
-	$ppp = get_option('posts_per_page');
-
-	//Next, detect and handle pagination...
-	if ($query->is_paged && $query->is_main_query()) {
-
-		//Manually determine page query offset (offset + current page (minus one) x posts per page)
-		$page_offset = $offset + ( ($query->query_vars['paged'] - 1) * $ppp );
-
-		//Apply adjust page offset
-		$query->set('offset', $page_offset);
-	}
-}
-
 // Escape HTML in <code> or <pre><code> tags.
 function escapeHTML($arr) {
 

@@ -1,5 +1,17 @@
 // mixins
 
+
+// modern clearfix
+@mixin clearfix {
+  &:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+}
+
+
+
 //  Responsive font sizing. The size of the font will scale with the viewport based on the information that you provide it. Additional properties may be adding for things like padding.
 
 // Credit to: 
