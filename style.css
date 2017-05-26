@@ -632,6 +632,49 @@ big {
   font-size: 125%;
 }
 
+.social-icons {
+  font-size: 1.85rem;
+}
+.social-icons a {
+  text-decoration: none;
+}
+.social-icons a:hover, .social-icons a:focus, .social-icons a:active {
+  background-color: transparent;
+  border: none;
+}
+
+.icon {
+  font-size: inherit;
+  line-height: 1;
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  margin: .05em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*
+.ic-site:before {content: "\f1fe";}
+.ic-twitter:before {content: "\f243";}
+.ic-linkedin:before {content: "\f239";}
+.ic-github:before {content: "\f233"; }
+.ic-codepen:before {content: "\f4dd";}
+.ic-email:before {content: "\f10f";}
+.ic-rss:before {content: "\f23d";}
+.ic-pinned:before {content: "\f2a6";}
+.ic-heart-full:before {content: "\f443";}
+.ic-heart-line:before {content: "\f442";}
+.ic-chevron-left:before {content: "\f124";}
+.ic-chevron-right:after {content: "\f125";}
+.ic-bookmark:before {content: "\f36b";}
+.ic-checkmark:before {content: "\f122";}
+.ic-code:before {content:"\f271"; font-weight: bold;}*/
 /*--------------------------------------------------------------
 # sections (content/posts/widgets)
 --------------------------------------------------------------*/
@@ -781,6 +824,10 @@ big {
 .article-date {
   color: #a61c3c;
   font-weight: 700;
+}
+
+.edit-post {
+  font-size: .9rem;
 }
 
 .single .article-content,
@@ -989,7 +1036,8 @@ ol.comment-list .reply {
   border-radius: 4px;
   font-size: .9rem;
   color: #fdeee9;
-  width: 4rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
   text-align: center;
   margin-top: .5rem;
   float: right;
@@ -997,6 +1045,10 @@ ol.comment-list .reply {
 ol.comment-list .reply a {
   color: #fdeee9;
   text-decoration: none;
+}
+ol.comment-list .reply:after {
+  content: " \f21e ";
+  font-family: "Ionicons";
 }
 ol.comment-list .bypostauthor {
   display: block;
@@ -1013,7 +1065,6 @@ ol.comment-list .bypostauthor .reply {
   border-radius: 4px;
   font-size: .9rem;
   color: #b97375;
-  width: 4rem;
   text-align: center;
   margin-top: .5rem;
   float: right;
@@ -1025,6 +1076,10 @@ ol.comment-list .bypostauthor .reply a {
 ol.comment-list .children {
   margin-left: 0;
   padding-left: 0;
+}
+
+.edit-link {
+  display: block;
 }
 
 .comment-form button,

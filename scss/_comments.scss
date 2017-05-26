@@ -97,7 +97,8 @@ ol.comment-list {
 		border-radius: 4px;
 		font-size: .9rem;
 		color: $cream;
-		width: 4rem;
+		padding-left: .5rem;
+		padding-right: .5rem;
 		text-align: center;
 		margin-top: .5rem;
 		float: right;
@@ -106,6 +107,12 @@ ol.comment-list {
 			color: $cream;
 			text-decoration: none;
 		}
+		
+		&:after {
+			content: " \f21e ";
+			font-family: "Ionicons";
+		}
+		
 	}
 
 	.bypostauthor {
@@ -124,7 +131,6 @@ ol.comment-list {
 		border-radius: 4px;
 		font-size: .9rem;
 		color: $mauve;
-		width: 4rem;
 		text-align: center;
 		margin-top: .5rem;
 		float: right;
@@ -142,6 +148,10 @@ ol.comment-list {
 		
 	}
 
+}
+
+.edit-link {
+	display: block;
 }
 
 // comment form

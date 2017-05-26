@@ -36,7 +36,13 @@
 			<div class="article-tags">
 				<?php echo get_the_tag_list('<span class="article-tag">','</span><span class="article-tag">','</span>'); ?>
 			</div>
+			
+			<?php if (is_user_logged_in() ) {
+						echo edit_post_link('Edit this post', '<span class="edit-post">', '</span>');
+			} ?>
+			 
 		</div>
+		
 
 		<?php
 		endif; ?>
