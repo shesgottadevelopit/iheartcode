@@ -30,8 +30,8 @@ function iheartcode_pagination() {
 		'prev_next' => true,
 		'prev_text' => __('<span class="prev-nav">&laquo;<span class="swap">Newer Posts</span></span>'),
 		'next_text' => __('<span class="next-nav"><span class="swap">Older Posts</span> &raquo;</span>'),
-		'end_size' => 1,
-		'mid_size' => 2,
+		'end_size' => 0,
+		'mid_size' => 0,
 		'type' => 'plain',
 		'before_page_number' => '<span class="page-nums">',
 		'after_page_number' => '</span>'
