@@ -12,7 +12,7 @@
 		<div class="article-meta">
 			<div class="single-meta">
 				<span class="article-categories"><?php the_category(' & '); ?></span> 
-				<span style="color:white"> | </span>
+				<span class="white-divider"> | </span>
 				<span><?php echo get_the_date("l // F j, Y"); ?></span>
 			</div>
 		<div><!--featured image -->

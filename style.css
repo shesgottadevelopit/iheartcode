@@ -897,6 +897,10 @@ big {
   outline: 0;
 }
 
+.white-divider {
+  color: #fdeee9;
+}
+
 .archive-description {
   font-size: 1rem;
 }
