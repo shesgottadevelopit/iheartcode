@@ -741,6 +741,10 @@ big {
   padding-bottom: 4rem;
 }
 
+.search .article-header {
+  background-color: #fdeee9;
+}
+
 .single .article-title,
 .page .article-title,
 .page-header {
@@ -763,23 +767,32 @@ big {
   }
 }
 
-.article-title {
+.article-title,
+.search .article-title {
   font-weight: 700;
   color: #5c5346;
   font-size: 1.67rem;
 }
-.article-title a {
+.article-title a,
+.search .article-title a {
   font-weight: 600;
   text-decoration: none;
   color: #5c5346;
 }
-.article-title a:visited {
+.article-title a:visited,
+.search .article-title a:visited {
   color: #5c5346;
 }
-.article-title a:hover, .article-title a:focus, .article-title a:active {
+.article-title a:hover, .article-title a:focus, .article-title a:active,
+.search .article-title a:hover,
+.search .article-title a:focus,
+.search .article-title a:active {
   color: #b97375;
 }
-.article-title a:hover, .article-title a:focus, .article-title a:active {
+.article-title a:hover, .article-title a:focus, .article-title a:active,
+.search .article-title a:hover,
+.search .article-title a:focus,
+.search .article-title a:active {
   outline: 0;
 }
 

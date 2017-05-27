@@ -16,7 +16,7 @@ get_header(); ?>
 			iheartcode_pagination();
 			//echo get_the_posts_pagination();
 		else :
-			get_template_part( 'content', 'none' );
+			get_template_part( 'content-none' );
 		endif; ?>
 </main>
 <?php get_sidebar(); ?>

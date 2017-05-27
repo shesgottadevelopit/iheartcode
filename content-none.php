@@ -5,8 +5,8 @@
  */
 ?>
 <article>
-	<header>
-		<h1><?php esc_html_e( 'Nothing Found', 'iheartcode' ); ?></h1>
+	<header class="article-header">
+		<h2 class="article-title"><?php esc_html_e( 'Womp womp', 'iheartcode' ); ?></h2>
 	</header>
 
 	<div>

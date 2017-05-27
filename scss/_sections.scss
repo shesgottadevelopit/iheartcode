@@ -90,6 +90,10 @@
 	@extend .article-header;
 }
 
+.search .article-header {
+	background-color: $cream;
+}
+
 .single .article-title,
 .page .article-title,
 .page-header {
@@ -97,7 +101,8 @@
 	text-align: center;
 	color: $white;
 }
-.article-title {
+.article-title,
+.search .article-title {
 	font-weight: 700;
 	color: $lightbrown;
 	font-size: 1.67rem;
