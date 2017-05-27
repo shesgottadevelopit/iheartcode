@@ -3,19 +3,21 @@ Theme Name: iheartcode wordpress theme
 Theme URI: http://akudo.codes
 Author: akudo chigozie
 Author URI: http://akudo.codes
-Description: a basic plain text theme focused on the content of coding
+Description: a cute and basic theme with monospaced fonts, focused on the activity of coding
 Version: 0.5
-Tags:
+Tags: pink, mauve, cute, basic
 */
 /*--------------------------------------------------------------
-CSS structure
+Table of Contents
 ----------------------------------------------------------------
-# 
-# 
-#
-# 
-# 
-#
+# Normalize 
+# Layout
+# Formatting
+# Typography/Icons
+# Site Sections
+# Forms/Comments
+# Navigation & Links
+# Media
 
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -652,22 +654,6 @@ big {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/*
-.ic-site:before {content: "\f1fe";}
-.ic-twitter:before {content: "\f243";}
-.ic-linkedin:before {content: "\f239";}
-.ic-github:before {content: "\f233"; }
-.ic-codepen:before {content: "\f4dd";}
-.ic-email:before {content: "\f10f";}
-.ic-rss:before {content: "\f23d";}
-.ic-pinned:before {content: "\f2a6";}
-.ic-heart-full:before {content: "\f443";}
-.ic-heart-line:before {content: "\f442";}
-.ic-chevron-left:before {content: "\f124";}
-.ic-chevron-right:after {content: "\f125";}
-.ic-bookmark:before {content: "\f36b";}
-.ic-checkmark:before {content: "\f122";}
-.ic-code:before {content:"\f271"; font-weight: bold;}*/
 /*--------------------------------------------------------------
 # sections (content/posts/widgets)
 --------------------------------------------------------------*/
@@ -983,7 +969,7 @@ big {
 }
 
 /*--------------------------------------------------------------
-# forms
+# forms/comments
 --------------------------------------------------------------*/
 .post-comments {
   margin-top: 1.5rem;
@@ -1118,7 +1104,7 @@ ol.comment-list .children {
   	padding: .6em 1em .4em;*/
 }
 
-@media screen and (min-width: 660px) {
+@media screen and (min-width: 695px) {
   ol.comment-list .children {
     margin-left: 1.5em;
   }
@@ -1274,79 +1260,6 @@ a:hover, a:active {
   left: auto;
 }
 
-/*.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
-}
-
-.main-navigation ul {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-}
-
-.main-navigation li {
-	float: left;
-	position: relative;
-}
-
-.main-navigation a {
-	display: block;
-	text-decoration: none;
-}
-
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 1.5em;
-	left: -999em;
-	z-index: 99999;
-}
-
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
-}
-
-.main-navigation ul ul a {
-	width: 200px;
-}
-
-.main-navigation ul ul li {
-
-}
-
-.main-navigation li:hover > a,
-.main-navigation li.focus > a {
-}
-
-.main-navigation ul ul :hover > a,
-.main-navigation ul ul .focus > a {
-}
-
-.main-navigation ul ul a:hover,
-.main-navigation ul ul a.focus {
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
-}
-
-.main-navigation .current_page_item > a,
-.main-navigation .current-menu-item > a,
-.main-navigation .current_page_ancestor > a,
-.main-navigation .current-menu-ancestor > a {
-}*/
 /* Small menu. */
 .menu-toggle,
 .top-nav.toggled ul {

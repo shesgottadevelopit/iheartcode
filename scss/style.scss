@@ -3,19 +3,21 @@ Theme Name: iheartcode wordpress theme
 Theme URI: http://akudo.codes
 Author: akudo chigozie
 Author URI: http://akudo.codes
-Description: a basic plain text theme focused on the content of coding
+Description: a cute and basic theme with monospaced fonts, focused on the activity of coding
 Version: 0.5
-Tags:
+Tags: pink, mauve, cute, basic
 */
 /*--------------------------------------------------------------
-CSS structure
+Table of Contents
 ----------------------------------------------------------------
-# 
-# 
-#
-# 
-# 
-#
+# Normalize 
+# Layout
+# Formatting
+# Typography/Icons
+# Site Sections
+# Forms/Comments
+# Navigation & Links
+# Media
 
 --------------------------------------------------------------*/
 
@@ -44,7 +46,7 @@ CSS structure
 --------------------------------------------------------------*/
 @import "sections";
 /*--------------------------------------------------------------
-# forms
+# forms/comments
 --------------------------------------------------------------*/
 @import "comments";
 @import "forms";
