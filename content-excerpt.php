@@ -12,11 +12,13 @@
 			<?php if (is_user_logged_in() ) {
 						echo edit_post_link('Edit this post', '<br><span class="edit-post">', '</span>');
 			} ?>
+			<?php if (has_tag() ) : ?>
 			<div class="article-tags">
 				<?php echo get_the_tag_list('<span class="article-tag">','</span><span class="article-tag">','</span>'); ?>
 				<?php //echo get_tags(); ?>
 				<?php //the_tags(); ?>
 			</div>
+			<?php endif; ?>
 		</div>
 	</header>
 
