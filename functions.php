@@ -127,6 +127,17 @@ add_action( 'wp_enqueue_scripts', 'iheartcode_fonts' );
 /** uncomment below for custom features */
 
 /**
+ * Applies the theme's stylesheet to the Dashboard editor
+ * @link https://codex.wordpress.org/Editor_Style
+ * @link https://developer.wordpress.org/reference/functions/add_editor_style/
+ */
+function wp_add_editor_stylesheet() {
+	add_editor_style('admin/editor-style.css');  //add_editor_style( get_stylesheet_uri() );
+}
+add_action( 'after_setup_theme', 'wp_add_editor_stylesheet' );
+
+
+/**
  * Implement the Admin Features
  */
 require get_template_directory() . '/admin/custom-admin.php';
