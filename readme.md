@@ -4,6 +4,8 @@
 ### Summary
 I created this theme for my akudo.codes blog, built on the Wordpress platform. I started building this using my [lemonade-wp starter theme](https://github.com/shesgottadevelopit/lemonade-wp) (which is also based on the _s theme from Automattic).
 
+![iheartcode wordpress theme screenshot](/iheartcode/screenshot.png)
+
 
 #### Tools used:
 - Adobe Illustrator for prototyping
