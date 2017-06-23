@@ -7,8 +7,6 @@ nbproject/* # ignores Netbeans config folder
 node_modules/* # ignores Nodejs folder
 img/*
 rlt.css
-screenshot.jpg
-screenshot.png
 style.css.map
 robots.txt
 .editorconfig
